@@ -1,6 +1,9 @@
 import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react'
 
+import '../Navbar.css'
+
+
 
 const Navbar= () => {
   const [toggleMenu, setToggleMenu] = useState(false)
