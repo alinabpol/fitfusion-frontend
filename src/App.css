@@ -1,4 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+body{
+  background-color:black
+}
 .App {
   text-align: center;
+  color:#cbcbcb;
+  font-family: 'Pavanam', sans-serif;
 }
-
+.navbar{
+  height: 60px;
+  background-color: #6c6b6b;
+  position: relative;
+}
+.navbar-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+a {
+  color: rgb(251, 251, 251);
+  text-decoration: none;
+  font-size: x-large;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+}
+a:hover{
+  color: rgb(196, 196, 196);
+}
