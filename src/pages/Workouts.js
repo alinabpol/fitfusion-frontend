@@ -2,15 +2,16 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import "../Workouts.css"
+import Chat from '../components/Chat'
 
 const  Workouts = () => {
 
 const [workouts, setWorkouts] = useState([])
+
 const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
 
 
   const getAllWorkouts = async () => {
-
     const response = await fetch(URL_WORKOUTS);
     const data = await response.json();
     console.log("getAllWorkouts data:", data.data);
@@ -47,6 +48,7 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
             <h1>Loading...</h1>
         )}
 
+      <Chat/>
       </div>
       </div>
     );
