@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
+.workouts-page{
+    height: 110vh;
+}
+
+.workouts-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.workouts {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  .workouts a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .workouts h2 {
+    margin: 10px 0;
+    font-size: 26px;
+    transition: color 0.5s;
+
+  }
+  h2:hover{
+    color: rgb(212, 208, 186);
+  }
