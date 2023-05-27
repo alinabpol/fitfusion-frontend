@@ -16,9 +16,9 @@ const Main = () => {
         <Routes>
             <Route exact path="/" element={<Home/>}></Route>
             <Route exact path="/nutrition" element={<Nutrition/>}></Route>
-            <Route exact path="/nutrition/show" element={<NutritionShow/>}></Route>
+            <Route exact path="/nutrition/show/:id" element={<NutritionShow/>}></Route>
             <Route exact path="/workouts" element={<Workouts/>}></Route>
-            <Route exact path="/workouts/show" element={<WorkoutsShow/>}></Route>
+            <Route exact path="/workouts/show/:id" element={<WorkoutsShow/>}></Route>
             <Route exact path="/analytics" element={<Analytics/>}></Route>
             <Route exact path="/analytics/form" element={<AnalyticsForm/>}></Route>
         </Routes>
