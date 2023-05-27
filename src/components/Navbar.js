@@ -1,35 +1,45 @@
-import { useRef} from "react"
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import {useState, useEffect} from 'react'
 
 
 const Navbar= () => {
+  const [toggleMenu, setToggleMenu] = useState(false)
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
-    const navRef = useRef()
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+  }
 
-    const showNav = () => {
-      navRef.current.classList.toggle("responsive-nav")
+ 
+  useEffect(() => {
+
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
     }
-    const handleClick = (event) => {
-      event.preventDefault();
-    };
+    window.addEventListener('resize', changeWidth)
+    return () => {
+      window.removeEventListener('resize', changeWidth)
+  }
+// eslint-disable-next-line
+  }, [])
 
   return (
-    <nav className="navbar">
-    <div className="navbar-container" ref={navRef}>
-    <button className="nav-btn" onClick={showNav}>
+    <nav>
+      {(toggleMenu || screenWidth > 900) && (
+    <ul className="list">
+  
+      <a className="items" id="logo" href="/#">FITFUSION</a>
+      <a className="items" href="/nutrition">NUTRITION</a>
+      <a className="items" href="/workouts">WORKOUTS</a>
+      <a className="items"href="/analytics">ANALYTICS</a>
+      <a className="items" href="/#">SIGN IN</a>
+
+   </ul>
+        )}
+    <button onClick={toggleNav} className="btn">
           <FaBars />
       </button>
-  
-      <a href="/#">FITFUSION</a>
-      <a href="/nutrition">NUTRITION</a>
-      <a href="/workouts">WORKOUTS</a>
-      <a href="/analytics">ANALYTICS</a>
-      <a href="/#">SIGN IN</a>
 
-    </div>
-    <button className="nav-btn" onClick={showNav}>
-          <FaTimes />
-        </button>
     </nav>
   );
 }

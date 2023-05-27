@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
 body{
-  background-color:black
+  background-color:#1c1c1c
 }
 .App {
   text-align: center;
@@ -8,6 +8,9 @@ body{
   font-family: 'Pavanam', sans-serif;
 }
 h1{
-  font-size: 50px
+  font-size: 50px;
+  margin-top: 6%;
+  text-transform: uppercase;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
