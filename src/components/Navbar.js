@@ -1,10 +1,33 @@
 import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react'
 
+import '../Navbar.css'
+
+
 
 const Navbar= () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [showNav, setShowNav] = useState(true)
+
+  const controlNavbar = () => {
+    if (window.scrollY>100) {
+      setShowNav(false)
+    } else {
+      setShowNav(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', 
+    controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', 
+      controlNavbar)
+    }
+// eslint-disable-next-line
+  }, [])
+
 
   const toggleNav = () => {
     setToggleMenu(!toggleMenu)
@@ -24,7 +47,7 @@ const Navbar= () => {
   }, [])
 
   return (
-    <nav>
+    <div className={`nav-control ${!showNav && 'hidden'}`}>
       {(toggleMenu || screenWidth > 900) && (
     <ul className="list">
   
@@ -40,7 +63,7 @@ const Navbar= () => {
           <FaBars />
       </button>
 
-    </nav>
+    </div>
   );
 }
 export default Navbar;
