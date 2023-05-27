@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
-  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+  /* height: 50px; */
+  background: rgb(55, 68, 58);
   z-index:2;
 }
 
 .list {
   list-style-type: none;
-  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+  background: rgb(55, 68, 58);
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   position: relative;
 }
 .items {
@@ -26,6 +24,9 @@ nav {
   cursor: pointer;
 }
 
+#logo{
+  align-self:flex-end;
+}
 .btn {
   display: none;
   position: absolute;
@@ -36,24 +37,20 @@ nav {
   font-size: 18px;
 }
 
-  li {
+  a {
     color: rgb(251, 251, 251);
     text-decoration: none;
     font-size: x-large;
-    -webkit-transition: color 0.5s;
-    -moz-transition:    color 0.5s;
-    -ms-transition:     color 0.5s;
-    -o-transition:      color 0.5s;
-    transition:         color 0.5s;
+    transition: color 0.5s;
   }
-  li:hover{
+  a:hover{
     color: rgb(0, 0, 0);
   }
  
   
   @media screen and (max-width: 900px){
-    nav{
-      height: -50px;
+    h1{
+      margin-top: 10%;
     }
     .list {
         flex-direction: column;

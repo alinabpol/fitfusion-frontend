@@ -1,4 +1,4 @@
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react'
 
 
@@ -28,22 +28,18 @@ const Navbar= () => {
       {(toggleMenu || screenWidth > 900) && (
     <ul className="list">
   
-
-      <li className="items" href="/#">FITFUSION</li>
-      <li className="items" href="/nutrition">NUTRITION</li>
-      <li className="items" href="/workouts">WORKOUTS</li>
-      <li className="items"href="/analytics">ANALYTICS</li>
-      <li className="items" href="/#">SIGN IN</li>
+      <a className="items" id="logo" href="/#">FITFUSION</a>
+      <a className="items" href="/nutrition">NUTRITION</a>
+      <a className="items" href="/workouts">WORKOUTS</a>
+      <a className="items"href="/analytics">ANALYTICS</a>
+      <a className="items" href="/#">SIGN IN</a>
 
    </ul>
         )}
     <button onClick={toggleNav} className="btn">
           <FaBars />
       </button>
-    {/* <button className="btn-close" >
-          <FaTimes />
-        </button> */}
- 
+
     </nav>
   );
 }
