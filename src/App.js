@@ -1,4 +1,5 @@
 import './App.css';
+import './Navbar.css'
 
 import Main from "./components/Main"
 import Navbar from './components/Navbar';

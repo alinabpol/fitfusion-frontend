@@ -3,7 +3,7 @@
 function Workouts() {
     return (
       <div className="workouts-container">
-        <h1> Workouts page</h1>
+        <h1> WORKOUTS </h1>
       </div>
     );
   }
