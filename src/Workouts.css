@@ -28,3 +28,9 @@
   h2:hover{
     color: rgb(212, 208, 186);
   }
+  img{
+    width: 100%;
+    max-width: 70%;
+
+    margin-top: 10%;
+  }
