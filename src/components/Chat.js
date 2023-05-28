@@ -3,7 +3,7 @@ import "../Chat.css"
 
 const Chat = () => {
 
-    const URL = "ttp://localhost:8000/api/v1/chat"
+    const URL = "http://localhost:8000/api/v1/chat/"
     const [messages, setMessages] = useState([])
 
     const handleMessageSubmit = async (e) => {
@@ -22,11 +22,12 @@ const Chat = () => {
             },
           });
           const data = await getResponseFromAI.json();
-          console.log("data from chat reponse", data)
+          console.log("data from chat reponse", data.data)
       
 
-    const addResponseToChat = [...updateMessages, { content: data, sender: 'openai' }];
+    const addResponseToChat = [...updateMessages, { content: data.data, sender: 'openai' }];
     setMessages(addResponseToChat);
+    console.log("response",addResponseToChat )
   };
 
         return(
@@ -41,7 +42,7 @@ const Chat = () => {
             <form className="message-input" onSubmit={handleMessageSubmit}>
               <input type="text" name="message" placeholder="Type your message..." />
               <button type="submit">Send</button>
-            </form>
+            </form>-
           </div>
         );
       };
