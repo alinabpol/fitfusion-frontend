@@ -1,7 +1,8 @@
 import './App.css';
 
 import Main from "./components/Main"
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
+import Chat from './components/Chat';
 
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <Main/>
+      <Chat/>
+      
 
     </div>
   );

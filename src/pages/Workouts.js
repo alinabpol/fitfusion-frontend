@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 
 import "../Workouts.css"
 
+
 const  Workouts = () => {
 
 const [workouts, setWorkouts] = useState([])
+
 const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
 
 
   const getAllWorkouts = async () => {
-
     const response = await fetch(URL_WORKOUTS);
     const data = await response.json();
     console.log("getAllWorkouts data:", data.data);
