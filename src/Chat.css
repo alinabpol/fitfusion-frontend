@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
+
+.chat-container {
+    display: none;
+  }
+  .chat-container.open {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #dbe7d9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family:'IBM Plex Sans Condensed', sans-serif;
+    color: black;
+    opacity: 97%;
+    overflow-y: auto;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .chat-container.closed {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  
+  .message-display {
+    flex: 1;
+    padding: 10px;
+    overflow-y: scroll;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .You {
+    background-color: rgb(174, 177, 175);
+  }
+  
+  .Assistant {
+    background-color: #fff;
+  }
+  
+  .message-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #e8e7e7;
+  }
+  
+  .user-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+    max-width: 60%;
+    margin-right: 8%;
+  }
+ .user-input:focus{
+    background-color: #ffffff;
+    border:none;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: rgb(84, 90, 85);
+    border: none;
+    border-radius: 4px;
+    color: #efefef;
+    cursor: pointer;
+    font-size: large;
+  }
+  
+  button:hover {
+    background-color:rgb(59, 65, 60);
+  }
+  .close-button {
+    align-self: flex-end;
+    padding: 5px;
+    font-size: 25px;
+    width: 40px;
+    font-weight: bold;
+    background-color: rgb(224, 219, 219);
+    border: none;
+    cursor: pointer;
+    color:rgb(161, 164, 164);
+    margin-right: 2%;
+    margin-top: 2%;
+    
+
+  }
+  
+  .chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .chat-icon img {
+    width: 60%;
+    height: 60%;
+  }
+  .chat-icon:hover{
+    transform: scale(1.1);
+  }

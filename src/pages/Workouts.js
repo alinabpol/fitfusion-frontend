@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import "../Workouts.css"
-import Chat from '../components/Chat'
+
 
 const  Workouts = () => {
 
@@ -48,7 +48,6 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
             <h1>Loading...</h1>
         )}
 
-      <Chat/>
       </div>
       </div>
     );
