@@ -6,9 +6,9 @@ import "../styling/Analytics.css"
 const StackedHistogram = () => {
     const [workoutData, setWorkoutData] = useState([
         { activity: "Test1", day: new Date(2020, 8, 1), count: 10 },
-        { activity: "Test1", day: new Date(2020, 7, 1), count: 15 },
+        { activity: "Test1", day: new Date(2020, 8, 1), count: 15 },
         { activity: "Test2", day: new Date(2020, 5, 2), count: 1 },
-        { activity: "Test3", day: new Date(2020, 4, 3), count: 1 },
+        { activity: "Test3", day: new Date(2020, 5, 2), count: 1 },
         { activity: "Test6", day: new Date(2020, 10, 4), count: 5 },
         { activity: "Test3", day: new Date(2020, 3, 2), count: 2 },
         { activity: "3", day: new Date(2020, 2, 2), count: 7 },
@@ -37,8 +37,9 @@ const StackedHistogram = () => {
           scale={{ x: "time" }}
           containerComponent={
             <VictoryVoronoiContainer
+            style={{}}
               labels={({ datum }) =>
-                datum.y > 0 ? `${datum.y} ${datum.binnedData[0].activity} activity` : null
+                datum.y > 0 ? `${datum.y} ${datum.binnedData[0].count} activity` : null
               }
             />
           }
@@ -89,8 +90,6 @@ const StackedHistogram = () => {
             dependentAxis
             label=""
             style={sharedAxisStyles}
-            tickCount={5}
-            tickFormat={(tick) => `${tick}`}
           />
         </VictoryChart>
       </div>

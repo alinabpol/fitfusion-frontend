@@ -1,6 +1,8 @@
 import Card from "../components/Card"
 import AnalyticsCircle from "../components/AnalyticsCircle"
 import StackedHistogram from "../components/StackedHistogram";
+import WeightChart from "../components/WeightChart";
+
 import "../styling/Analytics.css"
 
 function Analytics() {
@@ -23,9 +25,9 @@ function Analytics() {
             </div>
               <StackedHistogram/>
           </Card>
-          
+
           <Card>
-            3
+            {/* <WeightChart/> */}
           </Card>
           <Card>
             4
