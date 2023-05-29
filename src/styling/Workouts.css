@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
 .workouts-page{
     height: 190vh;
+    background-color: black;
 }
 
 .workouts-container{
@@ -28,9 +29,9 @@
   h2:hover{
     color: rgb(212, 208, 186);
   }
-  img{
+  .header-image{
     width: 100%;
-    max-width: 70%;
+    max-width: 100%;
+    max-height: 40%;
 
-    margin-top: 10%;
   }

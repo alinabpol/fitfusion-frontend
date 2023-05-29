@@ -26,6 +26,7 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
 
     return (
       <div className="workouts-page">
+            <img className="header-image" src="https://fitfusion.s3.us-west-1.amazonaws.com/mountains_large.jpg" alt=""></img>
         <h1> WORKOUTS </h1>
       <div className="workouts-container">
         {workouts ? (
@@ -49,9 +50,7 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
             )}
 
       </div>
-      <div>
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/fabian-kozdon-5ZeooCGNw3s-unsplash.jpg" alt=""></img>
-            </div>
+ 
       </div>
     );
   }
