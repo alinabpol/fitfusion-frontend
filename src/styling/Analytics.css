@@ -1,0 +1,26 @@
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 70%; 
+    margin-left: auto; 
+  }
+  .card {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .StackedHistogram {
+    width: 80%;
+    height: 80%;
+  }
+
+  .card1-header{
+    padding-bottom: 10%;
+  }
+
+  .AnalyticsCircle{
+    width: 800px
+  }

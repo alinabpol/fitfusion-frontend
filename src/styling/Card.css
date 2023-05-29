@@ -1,0 +1,11 @@
+.card {
+    width: calc(18% - 1px);
+    height: calc(19% - 10px);
+    margin: 15px;
+    position: relative;
+    box-shadow: 15px 15px 45px rgba(244, 243, 244, 0.3);
+    transform: scale(1);
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }

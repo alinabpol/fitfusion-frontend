@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Chat.css"
+import "../styling/Chat.css"
 
 const Chat = () => {
 
