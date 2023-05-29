@@ -27,7 +27,10 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
     return (
       <div className="workouts-page">
             <img className="header-image" src="https://fitfusion.s3.us-west-1.amazonaws.com/mountains_large.jpg" alt=""></img>
-        <h1> WORKOUTS </h1>
+      <h1 className="top-header1">Find a <span>Workout</span> to Elevate Your Mood and Well-being <span>Today!</span> </h1>
+      <h2 className="top-header2">Discover a collection of workout videos with trainer Sami
+        achieve your goals and enhance your daily routines.</h2>
+        <h1 className="header">Every Rep Counts. Make It Worth It.</h1>
       <div className="workouts-container">
         {workouts ? (
           workouts.map((workout) => (
@@ -41,7 +44,7 @@ const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
                     title="Embedded youtube"
               />
             <Link to={`/workout/show/${workout.id}`}>
-              <h2>{workout.activity} | {workout.calories} cal | {workout.time}</h2>
+              <h2 className="workout-titles">{workout.activity} | {workout.calories} cal | {workout.time}</h2>
             </Link>
           </div>
           ))
