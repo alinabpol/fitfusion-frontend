@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import "../Workouts.css"
+import "../styling/Workouts.css"
 
 
 const  Workouts = () => {

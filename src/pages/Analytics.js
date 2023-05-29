@@ -1,6 +1,7 @@
-import AnalyticsCircle from "../components/AnalyticsCircle";
-import Card from "../components/Card";
-
+import Card from "../components/Card"
+import AnalyticsCircle from "../components/AnalyticsCircle"
+import StackedHistogram from "../components/StackedHistogram";
+import "../styling/Analytics.css"
 
 function Analytics() {
     return (
@@ -8,12 +9,21 @@ function Analytics() {
         <h1> Analytics page</h1>
         <div className="grid-container">
           <Card>
-            <AnalyticsCircle/>
+            <div className="card1-header">
+            <h2>GOAL PROGRESS CHART</h2>
+            <h3>Weekly</h3>
+            </div>
+              <AnalyticsCircle/>
           </Card>
           
           <Card>
-            2
+            <div className="card2-header">
+              <h2>ACTIVITY TRACKER</h2>
+              <h3>Yearly</h3>
+            </div>
+              <StackedHistogram/>
           </Card>
+          
           <Card>
             3
           </Card>

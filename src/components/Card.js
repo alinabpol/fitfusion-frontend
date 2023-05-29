@@ -1,6 +1,5 @@
 import React from 'react'
-import '../Card.css'
-import AnalyticsCircle from './AnalyticsCircle';
+import '../styling/Card.css'
 
 const Card = ({ children }) => {
     return <div className="card">{children}</div>;

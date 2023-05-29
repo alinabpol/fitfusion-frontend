@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react'
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory'
+import "../styling/Analytics.css"
+
 
 function AnalyticsCircle() {
   const [percent, setPercent] = useState(25)
   const [data, setData] = useState(getData(0))
 
-//   useEffect(() => {
-//     let intervalId = setInterval(() => {
-//       let newPercent = percent + Math.random() * 25;
-//       newPercent = newPercent > 100 ? 0 : newPercent;
-//       setPercent(newPercent);
-//       setData(getData(newPercent));
-//     }, 2000);
+  useEffect(() => {
+    let intervalId = setInterval(() => {
+      let newPercent = percent + Math.random() * 25;
+      newPercent = newPercent > 100 ? 0 : newPercent;
+      setPercent(newPercent);
+      setData(getData(newPercent));
+    }, 2000);
 
-//     return () => {
-//       clearInterval(intervalId);
-//     };
-//   }, [percent]);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [percent]);
 
   function getData(percent) {
     return [
@@ -40,8 +42,9 @@ function AnalyticsCircle() {
           style={{
             data: {
               fill: ({ datum }) => {
-                const color = datum.y > 30 ? 'green' : 'red'
+                const color = datum.y > 30 ? '#F50057' : '#FF5252'
                 return datum.x === 1 ? color : 'transparent'
+                
               },
             },
           }}
@@ -55,7 +58,7 @@ function AnalyticsCircle() {
                 x={200}
                 y={200}
                 text={`${Math.round(newProps.percent)}%`}
-                style={{ fontSize: 45 }}
+                style={{ fontSize: 45, fill: 'white'  }}
               />
             );
           }}
