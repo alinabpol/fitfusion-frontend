@@ -1,7 +1,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 5% 0;
     width: 70%; 
     margin-left: auto; 
   }
@@ -22,5 +22,6 @@
   }
 
   .AnalyticsCircle{
-    width: 800px
+    width: 80%;
+    height: 80%;
   }
