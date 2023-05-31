@@ -1,4 +1,4 @@
-import './App.css';
+import './styling/App.css';
 
 import Main from "./components/Main"
 import Navbar from './components/Navbar'
@@ -11,8 +11,6 @@ function App() {
       <Navbar/>
       <Main/>
       <Chat/>
-      
-
     </div>
   );
 }
