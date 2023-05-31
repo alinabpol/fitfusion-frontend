@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=IBM+Plex+Sans:wght@700&family=Pavanam&display=swap');
 
+
 .workouts-page{
     height: 190vh;
     background-color: black;
+
 }
 
 .workouts-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+        margin-bottom: 20%;
 
 }
 .workouts {
@@ -77,5 +80,5 @@
     font-size: 35px;
   }
   span{
-    color:rgb(143, 47, 17);
+    color: #FF5252;
   }
