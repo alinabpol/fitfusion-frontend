@@ -33,7 +33,7 @@ const WeightChart = () => {
         style={{
           axisLabel: { padding: 30, fill: 'white' },
           tickLabels: { fill: 'white' },
-          grid: { stroke: 'white' },
+          grid: { stroke: 'grey' },
         }}
         domain={[80, 200]}
       />
@@ -42,7 +42,7 @@ const WeightChart = () => {
         style={{
           axisLabel: { padding: 40, fill: 'white' },
           tickLabels: { fill: 'white' },
-          grid: { stroke: 'white' },
+          grid: { stroke: 'grey' },
           
         }}
       />
