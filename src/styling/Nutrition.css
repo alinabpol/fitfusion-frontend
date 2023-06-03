@@ -38,25 +38,29 @@ img {
 }
 
 .top-nutrition-header, .bottom-nutrition-header{
-  padding-bottom: 10%;
-  padding-left: 5%;
-  width: 40%; 
-  height: 0;
-  padding-top: 3%; 
+  padding: 3% 5% 0;
+  width: 42%;
+  max-height: 100px;
   color: #fffcfc;
   text-align: left;
   top: 0;
   left: 0;
   position: absolute;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 50px;
+  font-size: 3.5vw;
 
 }
 
 .bottom-nutrition-header{
-  padding-top: 25%; 
+  padding: 28% 5% 0;
   font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 30px;
+  font-size: 1.5vw; 
  
+}
+
+.black-span{
+  color: black;
+  font-weight: 900;
+
 
 }
