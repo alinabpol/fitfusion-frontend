@@ -2,7 +2,7 @@
 function Breakfast() {
     return (
       <div className="home-container">
-        <h1> Home page</h1>
+        <h1> Breakfast page</h1>
 
       </div>
     );

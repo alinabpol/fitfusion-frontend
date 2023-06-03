@@ -2,7 +2,7 @@
 function Snacks() {
     return (
       <div className="home-container">
-        <h1> Home page</h1>
+        <h1> Snacks page</h1>
 
       </div>
     );

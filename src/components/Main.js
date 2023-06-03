@@ -21,12 +21,12 @@ const Main = () => {
         <Routes>
             <Route exact path="/" element={<Home/>}></Route>
             <Route exact path="/nutrition" element={<Nutrition/>}></Route>
-            <Route exact path="/nutrition" element={<Breakfast/>}></Route>
-            <Route exact path="/nutrition" element={<Lunch/>}></Route>
-            <Route exact path="/nutrition" element={<Dinner/>}></Route>
-            <Route exact path="/nutrition" element={<Desserts/>}></Route>
-            <Route exact path="/nutrition" element={<Snacks/>}></Route>
-            <Route exact path="/nutrition" element={<Smoothies/>}></Route>
+            <Route exact path="/breakfast" element={<Breakfast/>}></Route>
+            <Route exact path="/lunch" element={<Lunch/>}></Route>
+            <Route exact path="/dinner" element={<Dinner/>}></Route>
+            <Route exact path="/desserts" element={<Desserts/>}></Route>
+            <Route exact path="/snacks" element={<Snacks/>}></Route>
+            <Route exact path="/smoothies" element={<Smoothies/>}></Route>
             <Route exact path="/workouts" element={<Workouts/>}></Route>
             <Route exact path="/workouts/show/:id" element={<WorkoutsShow/>}></Route>
             <Route exact path="/analytics" element={<Analytics/>}></Route>

@@ -16,28 +16,40 @@ function Nutrition() {
         </div>
         <div className="grid-container-nutrition">
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
-            <h2>Breakfast</h2>
+            <Link to={'/breakfast'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Breakfast</h2>
           </div>
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/lunch1.png" alt=""></img>
-            <h2>Lunch</h2>
+            <Link to={'/lunch'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/lunch1.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Lunch</h2>
           </div>
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/dinner1.png" alt=""></img>
-            <h2>Dinner</h2>
+            <Link to={'/dinner'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/dinner1.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Dinner</h2>
           </div>
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/smoothies.png" alt=""></img>
-            <h2>Smoothies</h2>
+            <Link to={'/smoothies'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/smoothies.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Smoothies</h2>
           </div>
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/desserts.png" alt=""></img>
-            <h2>Desserts</h2>
+            <Link to={'/desserts'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/desserts.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Desserts</h2>
           </div>
           <div className="nutr-box">
-            <img src="https://fitfusion.s3.us-west-1.amazonaws.com/snacks.png" alt=""></img>
-            <h2>Snacks</h2>
+            <Link to={'/snacks'}>
+              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/snacks.png" alt=""></img>
+            </Link>
+            <h2 className="img-headers">Snacks</h2>
           </div>
         </div>
         
