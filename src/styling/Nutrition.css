@@ -24,6 +24,7 @@
   margin: 0 auto;
   text-align: center;
   grid-gap: 0 5% ;
+  padding: 10%
 }
 
 img {
@@ -34,4 +35,32 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.top-nutrition-header, .bottom-nutrition-header{
+  padding: 3% 5% 0;
+  width: 42%;
+  max-height: 100px;
+  color: #fffcfc;
+  text-align: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 3.5vw;
+
+}
+
+.bottom-nutrition-header{
+  padding: 28% 5% 0;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 1.5vw; 
+ 
+}
+
+.black-span{
+  color: black;
+  font-weight: 900;
+
+
 }
