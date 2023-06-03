@@ -24,6 +24,7 @@
   margin: 0 auto;
   text-align: center;
   grid-gap: 0 5% ;
+  padding: 10%
 }
 
 img {
@@ -34,4 +35,28 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.top-nutrition-header, .bottom-nutrition-header{
+  padding-bottom: 10%;
+  padding-left: 5%;
+  width: 40%; 
+  height: 0;
+  padding-top: 3%; 
+  color: #fffcfc;
+  text-align: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 50px;
+
+}
+
+.bottom-nutrition-header{
+  padding-top: 25%; 
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 30px;
+ 
+
 }

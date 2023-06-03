@@ -70,12 +70,12 @@
     left: 0;
     position: absolute;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 70px;
+    font-size: 60px;
 
   }
 
   .top-header2 {
-    padding-top: 28%; 
+    padding-top: 20px; 
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 35px;
   }
