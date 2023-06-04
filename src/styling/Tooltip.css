@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=IBM+Plex+Sans:wght@700&family=Pavanam&display=swap');
 
 .tooltip{
-    width: 10em;
-    height: 2em;
+    width: 6em;
+    height: 1em;
     padding: 1em;
     margin: 1em;
-    font-size: xx-large;
-    background-color:  rgb(55, 68, 58);
-    opacity: 90%;
-    color: rgb(255, 255, 255);
-    arrow: large;
+    font-size: x-large;
+    background-color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pavanam', sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    text-transform: uppercase
+
 }
+

@@ -51,6 +51,7 @@
 
 .img-headers{
   margin-top: 0px;
+  text-transform: uppercase;
 }
 
 .nutr-box{
@@ -83,6 +84,6 @@
 
 .black-span{
   color: black;
-  font-weight: 900;
+  font-weight: bold;
 
 }
