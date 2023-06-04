@@ -16,7 +16,7 @@
   margin-bottom: 10%;
 }
 
-.grid-container-nutrition {
+.grid-container-nutrition, .grid-container-recipes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -27,13 +27,13 @@
   padding: 10%
 }
 
-.img-recepies {
+.img-recipes {
   width: 100%;
   height: auto;
   -webkit-filter: brightness(100%);
 }
 
-.img-recepies:hover, .img-recepies:not(:hover) {
+.img-recipes:hover, .img-recipes:not(:hover) {
   -webkit-filter: brightness(70%);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -43,7 +43,7 @@
 
 }
 
-.img-recepies:not(:hover) {
+.img-recipes:not(:hover) {
   -webkit-filter: brightness(100%);
   filter: brightness(100%); 
 
