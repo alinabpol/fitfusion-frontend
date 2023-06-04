@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Tooltip from "../components/Tooltip";
 
 import "../styling/Nutrition.css"
 
@@ -17,37 +18,49 @@ function Nutrition() {
         <div className="grid-container-nutrition">
           <div className="nutr-box">
             <Link to={'/breakfast'}>
-              <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
+                <Tooltip content="Breakfast" data-tippy-size="jumbo">
+                  <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
+                </Tooltip>
             </Link>
             <h2 className="img-headers">Breakfast</h2>
           </div>
           <div className="nutr-box">
             <Link to={'/lunch'}>
+            <Tooltip content="Lunch">
               <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/lunch1.png" alt=""></img>
+              </Tooltip>
             </Link>
             <h2 className="img-headers">Lunch</h2>
           </div>
           <div className="nutr-box">
             <Link to={'/dinner'}>
+            <Tooltip content="Dinner">
               <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/dinner1.png" alt=""></img>
+              </Tooltip>
             </Link>
             <h2 className="img-headers">Dinner</h2>
           </div>
           <div className="nutr-box">
             <Link to={'/smoothies'}>
+            <Tooltip content="Smoothies">
               <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/smoothies.png" alt=""></img>
+              </Tooltip>
             </Link>
             <h2 className="img-headers">Smoothies</h2>
           </div>
           <div className="nutr-box">
             <Link to={'/desserts'}>
+            <Tooltip content="Desserts">
               <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/desserts.png" alt=""></img>
+              </Tooltip>
             </Link>
             <h2 className="img-headers">Desserts</h2>
           </div>
           <div className="nutr-box">
             <Link to={'/snacks'}>
+            <Tooltip content="Snacks">
               <img className="img-recepies" src="https://fitfusion.s3.us-west-1.amazonaws.com/snacks.png" alt=""></img>
+              </Tooltip>
             </Link>
             <h2 className="img-headers">Snacks</h2>
           </div>
