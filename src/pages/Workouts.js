@@ -35,7 +35,7 @@ const URL_WORKOUTS = "https://fitfusion.herokuapp.com/api/v1/workout/"
       <div className="workouts-container">
         {workouts ? (
           workouts.map((workout) => (
-            <div key={workout.id} className="workouts">
+            <div key={workout._id} className="workouts">
               <iframe
                     width="453"
                     height="280" 
@@ -44,7 +44,7 @@ const URL_WORKOUTS = "https://fitfusion.herokuapp.com/api/v1/workout/"
                     allowFullScreen
                     title="Embedded youtube"
               />
-            <Link to={`/workout/show/${workout.id}`}>
+            <Link to={`/workout/show/${workout._id}`}>
               <h2 className="workout-titles">{workout.activity} | {workout.calories} cal | {workout.time}</h2>
             </Link>
           </div>
