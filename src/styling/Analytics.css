@@ -39,16 +39,25 @@
     height: 80%;
   }
 
-  .btns{
+  .parent-analytics-btns-flex {
+    display: flex;
+   
+  }
+  .analytics-btns-flex{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btns button {
-    display: block;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-basis: 20%;
+    width: 100%;
     margin-bottom: 10px;
   }
+
+  .btns-container button {
+    margin-bottom: 10px;
+    width: 100%; 
+  }
+
 
   .sleep-chart{
     padding-bottom: 2%;
