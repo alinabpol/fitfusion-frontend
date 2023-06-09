@@ -41,13 +41,13 @@ function Breakfast() {
         <div className="grid-container-recipes">
         {allBreakfast ? (
           allBreakfast.map((breakfast) => (
-            <div key={breakfast.id} className="recipes">
-              <img className="img-recipes" src={breakfast.img} alt=""></img>
+            <div key={breakfast._id} className="recipes">
 
        
-            <Link to={`/breakfast/show/${breakfast.id}`}>
-              <h2 className="recipe-titles">{breakfast.title}</h2>
+            <Link to={`/breakfast/show/${breakfast._id}`}>
+              <img className="img-recipes" src={breakfast.img} alt=""></img>
             </Link>
+              <h2 className="recipe-titles">{breakfast.title}</h2>
 
             {formatTextWithNewLines(breakfast.ingredients)}
 

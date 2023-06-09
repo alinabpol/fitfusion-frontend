@@ -15,10 +15,12 @@ const Chat = () => {
         e.preventDefault()
         const userMessage = e.target.message.value
 
-
-    const updateMessages = [...messages, { content: userMessage, sender: 'You' }];
+        
+        const updateMessages = [...messages, { content: userMessage, sender: 'You' }];
         setMessages(updateMessages);
-
+        
+        e.target.message.value = "";
+        
         const getResponseFromAI = await fetch(URL, {
             method: 'POST',
             body: JSON.stringify({ message: userMessage }),

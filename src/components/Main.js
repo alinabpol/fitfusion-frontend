@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home"
 import Nutrition from "../pages/Nutrition";
 import Breakfast from "../pages/Breakfast";
+import BreakfastShow from "../pages/BreakfastShow";
 import Lunch from "../pages/Lunch";
 import Dinner from "../pages/Dinner";
 import Snacks from "../pages/Snacks";
@@ -22,6 +23,7 @@ const Main = () => {
             <Route exact path="/" element={<Home/>}></Route>
             <Route exact path="/nutrition" element={<Nutrition/>}></Route>
             <Route exact path="/breakfast" element={<Breakfast/>}></Route>
+            <Route exact path="/breakfast/show/:id" element={<BreakfastShow/>}></Route>
             <Route exact path="/lunch" element={<Lunch/>}></Route>
             <Route exact path="/dinner" element={<Dinner/>}></Route>
             <Route exact path="/desserts" element={<Desserts/>}></Route>

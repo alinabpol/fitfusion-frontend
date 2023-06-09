@@ -2,6 +2,8 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+
+
 function WorkoutsShow() {
   const [workout, setWorkout] = useState(null);
   const { id } = useParams();
