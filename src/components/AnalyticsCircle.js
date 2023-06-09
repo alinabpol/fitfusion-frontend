@@ -3,22 +3,21 @@ import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory'
 import "../styling/Analytics.css"
 
 
-function AnalyticsCircle() {
+function AnalyticsCircle({ goal, completed }) {
   const [percent, setPercent] = useState(25)
   const [data, setData] = useState(getData(0))
 
-  useEffect(() => {
-    let intervalId = setInterval(() => {
-      let newPercent = percent + Math.random() * 25;
-      newPercent = newPercent > 100 ? 0 : newPercent;
-      setPercent(newPercent);
-      setData(getData(newPercent));
-    }, 2000);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [percent]);
+
+
+  useEffect(() => {
+    const newPercent = (completed / goal) * 100  
+    setPercent(newPercent);
+    setData(getData(newPercent));
+    console.log("this is completed", completed)
+  }, [completed, goal]);
+
+
 
   function getData(percent) {
     return [

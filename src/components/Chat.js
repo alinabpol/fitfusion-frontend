@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+
 import "../styling/Chat.css"
+import "../styling/Button.css"
 
 const Chat = () => {
 
-    const URL = "http://localhost:8000/api/v1/chat/"
+    // const URL = "http://localhost:8000/api/v1/chat/"
+    const URL = "https://fitfusion.herokuapp.com/api/v1/chat/"
     const [messages, setMessages] = useState([])
     const [chatIsOpen, setChatIsOpen] = useState(false)
 
@@ -44,13 +48,13 @@ const Chat = () => {
       <>
       {chatIsOpen ? (
         <div className="chat-container open">
-          <button className="close-button" onClick={closeChat}>
-            X
+          <button className="close" onClick={closeChat}>
+          <FaTimes />
           </button>
             <div className="message-display">
               {messages.map((message, index) => (
                 <div key={index} className={`message ${message.sender}`}>
-                  {message.sender}:{message.content}
+                  <span className="sender"> {message.sender}</span>: {message.content} 
                 </div>
               ))}
             </div>
@@ -63,7 +67,7 @@ const Chat = () => {
                     name="message" 
                     placeholder="Type your message..." 
                   />
-                  <button type="submit">Send</button>
+                  <button className="chat-submit button-styled"type="submit">Send</button>
               </form>
             </div>
                ) : (

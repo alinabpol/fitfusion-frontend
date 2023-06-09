@@ -1,6 +1,7 @@
   .analytics-container{
     margin-bottom: 20%;
     margin-right: 5%;
+    position: relative;
   }
 
   .grid-container {
@@ -38,17 +39,65 @@
     height: 80%;
   }
 
-  .btns{
+  .parent-analytics-btns-flex {
+    display: flex;
+   
+  }
+  .analytics-btns-flex{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btns button {
-    display: block;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-basis: 20%;
+    width: 100%;
     margin-bottom: 10px;
   }
+
+  .btns-container button {
+    margin-bottom: 10px;
+    width: 100%; 
+  }
+
 
   .sleep-chart{
     padding-bottom: 2%;
   }
+
+
+  .popup-window {
+    display: flex;
+    flex-direction: column;
+    height: 80dvh;
+    width: 100dvh;
+    font-size: 30px;
+    background-color:  #ffffff;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .popup-header {
+    padding: 50px;
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
+
+  .analytics-container.popup-open .popup-overlay {
+    display: block;
+  }
+
+
+  .popup-flex-container{
+
+  }
+
+  
