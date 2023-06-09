@@ -8,7 +8,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #dbe7d9;
+    background-color: #e5eae5;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     width: 300px;
@@ -45,7 +45,7 @@
   }
   
   .You {
-    background-color: rgb(174, 177, 175);
+    background-color: rgb(178, 206, 197);
   }
   
   .Assistant {
@@ -74,7 +74,7 @@
     border:none;
   }
   
-  button {
+  .chat-submit {
     padding: 8px 16px;
     background-color: rgb(84, 90, 85);
     border: none;
@@ -84,22 +84,8 @@
     font-size: large;
   }
   
-  button:hover {
+  .chat-submit:hover {
     background-color:rgb(59, 65, 60);
-  }
-  .close-button {
-    align-self: flex-end;
-    padding: 5px;
-    font-size: 25px;
-    width: 40px;
-    font-weight: bold;
-    background-color: rgb(224, 219, 219);
-    border: none;
-    cursor: pointer;
-    color:rgb(161, 164, 164);
-    margin-right: 2%;
-    margin-top: 2%;
-
   }
   
   .chat-icon {
@@ -125,4 +111,9 @@
   }
   .chat-icon:hover{
     transform: scale(1.1);
+  }
+
+  .close{
+    color: rgb(185, 185, 185);
+    font-size: 1.5rem;
   }

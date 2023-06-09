@@ -8,7 +8,8 @@ const  Workouts = () => {
 
 const [workouts, setWorkouts] = useState([])
 
-const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
+// const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
+const URL_WORKOUTS = "https://fitfusion.herokuapp.com/api/v1/workout/"
 
 
   const getAllWorkouts = async () => {

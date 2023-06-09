@@ -4,6 +4,7 @@ import { useState } from 'react';
 import "../styling/Analytics.css"
 
 const StackedHistogram = () => {
+  // eslint-disable-next-line
     const [workoutData, setWorkoutData] = useState([
         { activity: "Test1", day: new Date(2020, 8, 1), count: 10 },
         { activity: "Test1", day: new Date(2020, 8, 1), count: 15 },
@@ -34,7 +35,7 @@ const StackedHistogram = () => {
       <div className="StackedHistogram">
         <VictoryChart
           height={450}
-          scale={{ x: "time" }}
+          // scale={{ x: "time" }}
           containerComponent={
             <VictoryVoronoiContainer
             style={{}}

@@ -44,3 +44,13 @@
 .button-styled:hover{
     background: #1a1a4d;
 }
+
+.close {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    color: rgb(3, 3, 3);
+    font-size: 1.8rem;
+    align-self: flex-end;
+  }
