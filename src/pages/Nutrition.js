@@ -18,7 +18,7 @@ function Nutrition() {
         <div className="grid-container-nutrition">
           <div className="nutr-box">
             <Link to={'/breakfast'}>
-                <Tooltip content="Breakfast">
+                <Tooltip content="Breakfast ">
                   <img className="img-recipes" src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
                 </Tooltip>
             </Link>

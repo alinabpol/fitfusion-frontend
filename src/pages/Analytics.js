@@ -4,6 +4,7 @@ import AnalyticsCircle from "../components/AnalyticsCircle"
 import StackedHistogram from "../components/StackedHistogram";
 import WeightChart from "../components/WeightChart";
 import SleepChart from "../components/SleepChart";
+import UpdateForm from '../components/UpdateForm';
 
 import { useState } from 'react'
 import { FaTimes } from "react-icons/fa";
@@ -15,6 +16,14 @@ import "../styling/Button.css"
 function Analytics() {
 
   const [isPopupOpen ] = useState(false);
+  const [goal, setGoal] = useState(5);
+  const [completed, setCompleted] = useState(0);
+
+  const handleUpdate = (newGoal, newCompleted) => {
+    setGoal(newGoal);
+    setCompleted(newCompleted);
+  };
+
   
     return (
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
@@ -31,11 +40,15 @@ function Analytics() {
                     }modal nested>
                         {close => (
                           <div className='popup-window'>
-                            <button className="close" tabindex="0" onClick=
+                            <button className="close" tabIndex="0" onClick=
                               {() => close()}>
                                    <FaTimes />
                             </button>
-                              <h4 className="popup-header">popup content</h4>
+                            <div className="popup-flex-container">
+                            <UpdateForm goal={goal} completed={completed} onUpdate={handleUpdate} />
+                              
+                            </div>
+
                            
                           </div>
                   )}
@@ -54,7 +67,7 @@ function Analytics() {
               <h2>GOAL PROGRESS CHART</h2>
               <h3>Weekly</h3>
             </div>
-              <AnalyticsCircle/>
+              <AnalyticsCircle goal={goal} completed={completed}/>
           </Card>
           
           <Card>

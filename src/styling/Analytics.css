@@ -67,10 +67,10 @@
   .popup-window {
     display: flex;
     flex-direction: column;
-    height: 60dvh;
-    width: 70dvh;
+    height: 80dvh;
+    width: 100dvh;
     font-size: 30px;
-    background-color: rgb(252, 253, 255);
+    background-color:  #ffffff;
     border-radius: 15px;
     transform-style: preserve-3d;
     transition: transform 1s;
@@ -95,3 +95,9 @@
     display: block;
   }
 
+
+  .popup-flex-container{
+
+  }
+
+  

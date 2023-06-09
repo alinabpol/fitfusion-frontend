@@ -22,6 +22,7 @@
     user-select: none;
     -webkit-user-select: none;
     width: auto;
+    text-transform: uppercase;
 }
     
 .button-styled:focus-visible {
@@ -42,8 +43,8 @@
     opacity: 1;
 }
 .button-styled:hover{
-    background: #000000;
-    color: rgb(208, 208, 208);
+    background: #dddddd;
+
 }
 
 .close {
@@ -54,4 +55,10 @@
     color: rgb(3, 3, 3);
     font-size: 1.8rem;
     align-self: flex-end;
-  }
+    margin: 1%;
+}
+
+.close:hover{
+    color: rgb(3, 3, 3);
+
+}
