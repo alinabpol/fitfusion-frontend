@@ -22,6 +22,7 @@ function DessertsShow() {
 
   useEffect(() => {
     getData();
+       // eslint-disable-next-line
   }, [id]);
 
   const formatTextWithNewLines = (text) => {

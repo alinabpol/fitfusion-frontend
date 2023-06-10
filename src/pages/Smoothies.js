@@ -26,7 +26,7 @@ function Smoothies() {
 
     return (
       <div className="recipes-flex-container">
-        <h1> Snacks page</h1>
+        <h1> Smoothies page</h1>
         <div className="grid-container-nutrition">
         {allSmoothies ? (
           allSmoothies.map((smoothie) => (
