@@ -22,6 +22,7 @@ function WorkoutsShow() {
 
   useEffect(() => {
     getWorkout();
+       // eslint-disable-next-line
   }, [id]);
 
   if (!workout) {

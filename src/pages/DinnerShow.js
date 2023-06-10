@@ -23,6 +23,7 @@ function DinnerShow() {
 
   useEffect(() => {
     getData();
+  // eslint-disable-next-line
   }, [id]);
 
   const formatTextWithNewLines = (text) => {
