@@ -7,7 +7,7 @@ import "../styling/NutritionShow.css"
 function DinnerShow() {
   const [dinner, setDinner] = useState(null);
   const { id } = useParams();
-  const URL = `https://fitfusion.herokuapp.com/api/v1/lunch/${id}`
+  const URL = `https://fitfusion.herokuapp.com/api/v1/dinner/${id}`
 
 
   const getData = async () => {
