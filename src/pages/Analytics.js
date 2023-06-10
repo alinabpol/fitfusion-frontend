@@ -19,9 +19,9 @@ function Analytics() {
   const [goal, setGoal] = useState(5);
   const [completed, setCompleted] = useState(0);
 
-  const handleUpdate = (newGoal, newCompleted) => {
-    setGoal(newGoal);
-    setCompleted(newCompleted);
+  const handleUpdate = (goalUpdated, completedUpdated) => {
+    setGoal(goalUpdated);
+    setCompleted(completedUpdated);
   };
 
   

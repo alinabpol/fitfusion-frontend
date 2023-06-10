@@ -4,25 +4,24 @@ import "../styling/Analytics.css"
 
 
 function AnalyticsCircle({ goal, completed }) {
-  const [percent, setPercent] = useState(25)
-  const [data, setData] = useState(getData(0))
-
-
-
+  const [percent, setPercent] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    const newPercent = (completed / goal) * 100  
+    const newPercent = (completed / goal) * 100;
     setPercent(newPercent);
-    setData(getData(newPercent));
-    console.log("this is completed", completed)
-  }, [completed, goal]);
-
-
+    const newData = getData(newPercent);
+    setData(newData);
+    // console.log("completed:", completed);
+    // console.log("goal:", goal);
+    // console.log("percent:", percent);
+    // console.log("data:", data);
+  }, [completed, goal, percent]);
 
   function getData(percent) {
     return [
-      { x: 1, y: percent },
-      { x: 2, y: 100 - percent },
+      { x: 1, y: percent }, // completed
+      { x: 2, y: 100 - percent }, // remaining
     ];
   }
 
@@ -48,7 +47,7 @@ function AnalyticsCircle({ goal, completed }) {
             },
           }}
         />
-        <VictoryAnimation duration={1000} data={{ percent }}>
+        <VictoryAnimation duration={1500} data={{ percent }}>
           {(newProps) => {
             return (
               <VictoryLabel
@@ -56,7 +55,7 @@ function AnalyticsCircle({ goal, completed }) {
                 verticalAnchor="middle"
                 x={200}
                 y={200}
-                text={`${Math.round(newProps.percent)}%`}
+                text={`${percent}%`}
                 style={{ fontSize: 45, fill: 'white'  }}
               />
             );
