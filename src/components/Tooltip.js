@@ -20,7 +20,6 @@ function Tooltip({ content, children }){
             duration='100'
             delay="300"
             theme='light'
-            arrowSize='large' 
         >
             {children}
         </Tippy>

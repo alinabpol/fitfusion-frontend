@@ -1,30 +1,19 @@
 import { VictoryChart, VictoryArea, VictoryAxis } from 'victory'
-
+import { useEffect } from 'react';
 import "../styling/Analytics.css"
 
+const WeightChart = ({weightData, setWeightData}) => {
 
-const WeightChart = () => {
-  const data = [
-    { x: 'Jan', y: 150 },
-    { x: 'Feb', y: 148 },
-    { x: 'Mar', y: 120 },
-    { x: 'Apr', y: 110 },
-    { x: 'May', y: 110 },
-    { x: 'Jun', y: null },
-    { x: 'Jul', y: null },
-    { x: 'Aug', y: null },
-    { x: 'Sept', y: null },
-    { x: 'Oct', y: null },
-    { x: 'Nov', y: null },
-    { x: 'Dec', y: null },
-   
-  ];
+  useEffect(() => {
+    console.log("weightdata now:", weightData)
+
+  }, [weightData]);
 
   return (
     <div className="weight-chart">
     <VictoryChart width={400} height={400}>
       <VictoryArea
-        data={data}
+        data={weightData}
         style={{ data: { fill: 'lightblue', stroke: 'teal' } }}
       />
       <VictoryAxis
