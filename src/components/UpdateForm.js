@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, sleepData, setSleepData }) {
+function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, sleepData, setSleepData, activityData, setActivityData }) {
   
   // constants for AnalyticsCircle chart
   const [goalUpdated, setGoalUpdated] = useState(goal);
@@ -14,6 +14,10 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, slee
   const [sleepChartDay, setSleepChartDay] = useState('');
   const [sleepValue, setSleepValue] = useState('');
 
+  // constants for Stackedbars
+  const [activityChartX, setActivityChartX] = useState('');
+  const [activityChartY, setActivityChartY] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     onUpdate(parseInt(goalUpdated), parseInt(completedUpdated));
@@ -22,11 +26,11 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, slee
   const handleWeightSubmit = (event) => {
     event.preventDefault();
     console.log(weightData)
-    const updatedWeightData = weightData.map((item) => {
-      if (item.x === weightMonth) {
-        return { x: item.x, y: weightValue };
+    const updatedWeightData = weightData.map((i) => {
+      if (i.x === weightMonth) {
+        return { x: i.x, y: weightValue };
       } else {
-        return item;
+        return i;
       }
     });
     setWeightData(updatedWeightData);
@@ -39,18 +43,35 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, slee
 const handleSleepSubmit = (event) => {
   event.preventDefault();
   console.log("sleepdata in form:",sleepData)
-  const updatedSleepData = sleepData.map((item) => {
-    if (item.day === sleepChartDay) {
-      return { day: item.day, hours: sleepValue };
+  const updatedSleepData = sleepData.map((i) => {
+    if (i.day === sleepChartDay) {
+      return { day: i.day, hours: sleepValue };
     } else {
-      console.log(item)
-      return item;
+      console.log(i)
+      return i;
     }
   });
 
   setSleepData(updatedSleepData);
   setSleepChartDay('');
   setSleepValue('');
+};
+
+const handleActivitySubmit = (event) => {
+  event.preventDefault();
+  console.log("activity data in form:",sleepData)
+  const updateActivityData = activityData.map((i) => {
+    if (i.x === activityChartX) {
+      return { x: i.x, y: activityChartY };
+    } else {
+      console.log(i)
+      return i;
+    }
+  });
+
+  setActivityData(updateActivityData);
+  setActivityChartX('');
+  setActivityChartY('');
 };
 
   return (
@@ -73,7 +94,7 @@ const handleSleepSubmit = (event) => {
             onChange={(event) => setCompletedUpdated(parseInt(event.target.value, 10))}
           />
         </label>
-        <button type="submit">Update</button>
+        <button type="submit">Submit</button>
       </form>
 
       {/* Form for WeightChart */}
@@ -81,7 +102,7 @@ const handleSleepSubmit = (event) => {
         <label>
           Month:
           <select value={weightMonth} onChange={(event) => setWeightMonth(event.target.value)}>
-            <option value="">Select a month</option>
+            <option value="">Month</option>
             <option value="Jan">January</option>
             <option value="Feb">February</option>
             <option value="Mar">March</option>
@@ -110,9 +131,9 @@ const handleSleepSubmit = (event) => {
       {/* Form for SleepChart */}
       <form onSubmit={handleSleepSubmit}>
         <label>
-          day:
+          Day:
           <select value={sleepChartDay} onChange={(event) => setSleepChartDay(event.target.value)}>
-            <option value="">Select a day</option>
+            <option value="">Day</option>
             <option value="Mon">Mon</option>
             <option value="Tue">Tue</option>
             <option value="Wed">Wed</option>
@@ -128,6 +149,32 @@ const handleSleepSubmit = (event) => {
             type="number"
             value={sleepValue}
             onChange={(event) => setSleepValue(parseInt(event.target.value, 10))}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+
+      {/* Form for StackedBars */}
+      <form onSubmit={handleActivitySubmit}>
+        <label>
+          Day:
+          <select value={activityChartX} onChange={(event) => setActivityChartX(event.target.value)}>
+            <option value="">Activity</option>
+            <option value="Running">Running</option>
+            <option value="Walking">Walking</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Gym">Gym</option>
+            <option value="Cancelled Workout">Cancelled Workout</option>
+            <option value="Stretching">Stretching</option>
+            <option value="Boxing">Boxing</option>
+          </select>
+        </label>
+        <label>
+          Qty:
+          <input
+            type="number"
+            value={activityChartY}
+            onChange={(event) => setActivityChartY(parseInt(event.target.value, 10))}
           />
         </label>
         <button type="submit">Submit</button>
