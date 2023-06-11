@@ -1,10 +1,18 @@
 import { useState } from 'react';
 
-function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData }) {
+function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, sleepData, setSleepData }) {
+  
+  // constants for AnalyticsCircle chart
   const [goalUpdated, setGoalUpdated] = useState(goal);
   const [completedUpdated, setCompletedUpdated] = useState(completed);
+
+  // constants for WeightChart
   const [weightMonth, setWeightMonth] = useState('');
   const [weightValue, setWeightValue] = useState('');
+
+  // constants for SleepChart
+  const [sleepChartDay, setSleepChartDay] = useState('');
+  const [sleepValue, setSleepValue] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,8 +34,28 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData }) {
     setWeightValue('');
   };
 
+
+
+const handleSleepSubmit = (event) => {
+  event.preventDefault();
+  console.log("sleepdata in form:",sleepData)
+  const updatedSleepData = sleepData.map((item) => {
+    if (item.day === sleepChartDay) {
+      return { day: item.day, hours: sleepValue };
+    } else {
+      console.log(item)
+      return item;
+    }
+  });
+
+  setSleepData(updatedSleepData);
+  setSleepChartDay('');
+  setSleepValue('');
+};
+
   return (
     <div>
+      {/* Form for AnalyticsCircle */}
       <form onSubmit={handleSubmit}>
         <label>
           Weekly Goal:
@@ -47,6 +75,8 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData }) {
         </label>
         <button type="submit">Update</button>
       </form>
+
+      {/* Form for WeightChart */}
       <form onSubmit={handleWeightSubmit}>
         <label>
           Month:
@@ -74,7 +104,33 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData }) {
             onChange={(event) => setWeightValue(parseInt(event.target.value, 10))}
           />
         </label>
-        <button type="submit">Update Weight</button>
+        <button type="submit">Submit</button>
+      </form>
+
+      {/* Form for SleepChart */}
+      <form onSubmit={handleSleepSubmit}>
+        <label>
+          day:
+          <select value={sleepChartDay} onChange={(event) => setSleepChartDay(event.target.value)}>
+            <option value="">Select a day</option>
+            <option value="Mon">Mon</option>
+            <option value="Tue">Tue</option>
+            <option value="Wed">Wed</option>
+            <option value="Thu">Thur</option>
+            <option value="Fri">Fri</option>
+            <option value="Sat">Sat</option>
+            <option value="Sun">Sun</option>
+          </select>
+        </label>
+        <label>
+          Hours of Sleep:
+          <input
+            type="number"
+            value={sleepValue}
+            onChange={(event) => setSleepValue(parseInt(event.target.value, 10))}
+          />
+        </label>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

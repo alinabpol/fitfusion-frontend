@@ -14,30 +14,43 @@ import "../styling/Button.css"
 
 
 function Analytics() {
+
+  // constant for WeightChart
   const [weightData, setWeightData] = useState([
-    { x: 'Jan', y: 150 },
-    { x: 'Feb', y: 148 },
-    { x: 'Mar', y: 120 },
-    { x: 'Apr', y: 110 },
-    { x: 'May', y: 110 },
-    { x: 'Jun', y: null },
-    { x: 'Jul', y: null },
-    { x: 'Aug', y: null },
-    { x: 'Sept', y: null },
-    { x: 'Oct', y: null },
-    { x: 'Nov', y: null },
-    { x: 'Dec', y: null },
+    { x: 'Jan', y: 0 },
+    { x: 'Feb', y: 0 },
+    { x: 'Mar', y: 0 },
+    { x: 'Apr', y: 0 },
+    { x: 'May', y: 0 },
+    { x: 'Jun', y: 0 },
+    { x: 'Jul', y: 0 },
+    { x: 'Aug', y: 0 },
+    { x: 'Sept', y: 0 },
+    { x: 'Oct', y: 0 },
+    { x: 'Nov', y: 0 },
+    { x: 'Dec', y: 0 },
    
-  ]);
+  ])
+
+  // constant for SleepChart
+  const [sleepData, setSleepData] = useState([
+      { day: 'Mon', hours: 0 },
+      { day: 'Tue', hours: 0 },
+      { day: 'Wed', hours: 0 },
+      { day: 'Thur', hours: 0 },
+      { day: 'Fri', hours: 0 },
+      { day: 'Sat', hours: 0 },
+      { day: 'Sun', hours: 0 }
+    ])
 
 
-  const [isPopupOpen ] = useState(false);
-
+    
   // constants for AnalyticsCircle
   const [goal, setGoal] = useState(5);
   const [completed, setCompleted] = useState(0);
-
-  // constants for StackedHistogram
+    
+    
+  const [isPopupOpen ] = useState(false);
 
   const handleUpdate = (goalUpdated, completedUpdated) => {
     setGoal(goalUpdated);
@@ -65,11 +78,16 @@ function Analytics() {
                                    <FaTimes />
                             </button>
                             <div className="popup-flex-container">
-                            <UpdateForm goal={goal} completed={completed} onUpdate={handleUpdate} weightData={weightData} setWeightData={setWeightData} />
-                              
+                              <UpdateForm 
+                                goal={goal} 
+                                completed={completed} 
+                                onUpdate={handleUpdate} 
+                                weightData={weightData}
+                                setWeightData={setWeightData} 
+                                sleepData={sleepData} 
+                                setSleepData={setSleepData}
+                              />         
                             </div>
-
-                           
                           </div>
                   )}
                </Popup>
@@ -110,7 +128,7 @@ function Analytics() {
           <h2>HOURS SLEPT</h2>
           <h3>Weekly</h3>
             </div>
-            <SleepChart/>
+            <SleepChart sleepData={sleepData} setsleepData={setSleepData}/>
           </Card>
 
         </div>
