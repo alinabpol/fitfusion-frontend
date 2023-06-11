@@ -6,13 +6,25 @@ import "../styling/Analytics.css"
 const StackedHistogram = () => {
   // eslint-disable-next-line
     const [workoutData, setWorkoutData] = useState([
-        { activity: "Test1", day: new Date(2020, 8, 1), count: 10 },
-        { activity: "Test1", day: new Date(2020, 8, 1), count: 15 },
-        { activity: "Test2", day: new Date(2020, 5, 2), count: 1 },
-        { activity: "Test3", day: new Date(2020, 5, 2), count: 1 },
-        { activity: "Test6", day: new Date(2020, 10, 4), count: 5 },
-        { activity: "Test3", day: new Date(2020, 3, 2), count: 2 },
-        { activity: "3", day: new Date(2020, 2, 2), count: 7 },
+        { activity: "Running", day: new Date(2023, 8, 1)},
+        { activity: "Running", day: new Date(2023, 8, 1)},
+        { activity: "Running", day: new Date(2023, 8, 1)},
+        { activity: "Running", day: new Date(2023, 8, 1)},
+        { activity: "Running", day: new Date(2023, 9, 1) },
+        { activity: "Yoga", day: new Date(2023, 5, 2) },
+        { activity: "Gym", day: new Date(2023, 6, 2) },
+        { activity: "Pilates", day: new Date(2023, 10, 4) },
+        { activity: "Pilates", day: new Date(2023, 10, 4) },
+        { activity: "Boxing", day: new Date(2023, 10, 4) },
+        { activity: "Boxing", day: new Date(2023, 10, 4) },
+        { activity: "Boxing", day: new Date(2023, 10, 4) },
+        { activity: "Boxing", day: new Date(2023, 3, 2) },
+        { activity: "Yoga", day: new Date(2023, 2, 2) },
+        { activity: "2", day: new Date(2023, 2, 2) },
+        { activity: "2", day: new Date(2023, 2, 2) },
+        { activity: "2", day: new Date(2023, 2, 2) },
+        { activity: "3", day: new Date(2023, 2, 2) },
+        { activity: "3", day: new Date(2023, 2, 2) },
        
       ]);
 
@@ -20,7 +32,7 @@ const StackedHistogram = () => {
 
     const sharedAxisStyles = {
       tickLabels: {
-        fontSize: 13,
+        fontSize: 15,
         fill: "white"
       },
       axisLabel: {
@@ -40,7 +52,7 @@ const StackedHistogram = () => {
             <VictoryVoronoiContainer
             style={{}}
               labels={({ datum }) =>
-                datum.y > 0 ? `${datum.y} ${datum.binnedData[0].count} activity` : null
+                datum.y > 0 ? `${datum.y} ${workoutData[0].activity} activity` : null
               }
             />
           }
@@ -90,6 +102,7 @@ const StackedHistogram = () => {
           <VictoryAxis
             dependentAxis
             label=""
+            tickValues={[1, 3, 6, 9, 12]} 
             style={sharedAxisStyles}
           />
         </VictoryChart>

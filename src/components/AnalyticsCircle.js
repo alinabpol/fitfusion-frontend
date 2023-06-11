@@ -7,6 +7,8 @@ function AnalyticsCircle({ goal, completed }) {
   const [percent, setPercent] = useState(0);
   const [data, setData] = useState([]);
 
+
+
   useEffect(() => {
     const newPercent = (completed / goal) * 100;
     setPercent(newPercent);

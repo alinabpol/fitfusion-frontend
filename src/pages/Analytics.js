@@ -14,10 +14,30 @@ import "../styling/Button.css"
 
 
 function Analytics() {
+  const [weightData, setWeightData] = useState([
+    { x: 'Jan', y: 150 },
+    { x: 'Feb', y: 148 },
+    { x: 'Mar', y: 120 },
+    { x: 'Apr', y: 110 },
+    { x: 'May', y: 110 },
+    { x: 'Jun', y: null },
+    { x: 'Jul', y: null },
+    { x: 'Aug', y: null },
+    { x: 'Sept', y: null },
+    { x: 'Oct', y: null },
+    { x: 'Nov', y: null },
+    { x: 'Dec', y: null },
+   
+  ]);
+
 
   const [isPopupOpen ] = useState(false);
+
+  // constants for AnalyticsCircle
   const [goal, setGoal] = useState(5);
   const [completed, setCompleted] = useState(0);
+
+  // constants for StackedHistogram
 
   const handleUpdate = (goalUpdated, completedUpdated) => {
     setGoal(goalUpdated);
@@ -45,7 +65,7 @@ function Analytics() {
                                    <FaTimes />
                             </button>
                             <div className="popup-flex-container">
-                            <UpdateForm goal={goal} completed={completed} onUpdate={handleUpdate} />
+                            <UpdateForm goal={goal} completed={completed} onUpdate={handleUpdate} weightData={weightData} setWeightData={setWeightData} />
                               
                             </div>
 
@@ -72,7 +92,7 @@ function Analytics() {
           
           <Card>
             <div className="card2-header">
-              <h2>ACTIVITY TRACKER</h2>
+              <h2>TYPE OF ACTIVITY TRACKER</h2>
               <h3>Yearly</h3>
             </div>
               <StackedHistogram/>
@@ -82,7 +102,7 @@ function Analytics() {
           <div className="card1and3-header">
             <h2>WEIGHT OVER TIME</h2>
               </div>
-                <WeightChart/>
+                <WeightChart weightData={weightData} setWeightData={setWeightData}/>
           </Card>
 
           <Card>
