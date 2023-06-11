@@ -2,17 +2,8 @@ import { VictoryChart, VictoryLabel, VictoryStack, VictoryAxis, VictoryBar } fro
 import { useState } from 'react';
 import "../styling/Analytics.css"
 
-const StackedBars = () => {
-  const activityData = [
-    { x: "Running", y: 57 },
-    { x: "Walking", y: 40 },
-    { x: "Swimming", y: 38 },
-    { x: "Gym", y: 37 },
-    { x: "Cancelled Workout", y: 25 },
-    { x: "Yoga", y: 15 },
-    { x: "Stretching", y: 13 },
-    { x: "Boxing", y: 12 }
-  ];
+const StackedBars = ({activityData, setActivityData}) => {
+
   
   const width = 400;
   const height = 400;

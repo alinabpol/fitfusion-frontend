@@ -44,13 +44,22 @@ function Analytics() {
     ])
 
 
-    
   // constants for AnalyticsCircle
   const [goal, setGoal] = useState(5);
   const [completed, setCompleted] = useState(0);
   
   
   // constant for StackedBars
+  const [activityData, setActivityData] = useState([
+    { x: "Running", y: 57 },
+    { x: "Walking", y: 40 },
+    { x: "Swimming", y: 38 },
+    { x: "Gym", y: 37 },
+    { x: "Cancelled Workout", y: 25 },
+    { x: "Yoga", y: 15 },
+    { x: "Stretching", y: 13 },
+    { x: "Boxing", y: 12 }
+  ])
     
   const [isPopupOpen ] = useState(false);
 
@@ -63,7 +72,6 @@ function Analytics() {
     return (
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
         <h1> Analytics page</h1>
-       
         <div className="parent-analytics-btns-flex">
           <div className="analytics-btns-flex">
             <div className="btns-container">
@@ -88,6 +96,8 @@ function Analytics() {
                                 setWeightData={setWeightData} 
                                 sleepData={sleepData} 
                                 setSleepData={setSleepData}
+                                activityData={activityData}
+                                setActivityData={setActivityData}
                               />         
                             </div>
                           </div>
@@ -115,12 +125,13 @@ function Analytics() {
               <h2>TYPE OF ACTIVITY TRACKER</h2>
               <h3>Over Time</h3>
             </div>
-              <StackedBars/>
+              <StackedBars activityData={activityData} setActivityData={setActivityData}/>
           </Card>
 
           <Card>
           <div className="card1and3-header">
             <h2>WEIGHT OVER TIME</h2>
+            <h3>Yearly</h3>
               </div>
                 <WeightChart weightData={weightData} setWeightData={setWeightData}/>
           </Card>
