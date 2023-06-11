@@ -1,7 +1,7 @@
 import Popup from 'reactjs-popup';
 import Card from "../components/Card"
 import AnalyticsCircle from "../components/AnalyticsCircle"
-import StackedHistogram from "../components/StackedHistogram";
+import StackedBars from "../components/StackedBars";
 import WeightChart from "../components/WeightChart";
 import SleepChart from "../components/SleepChart";
 import UpdateForm from '../components/UpdateForm';
@@ -48,7 +48,9 @@ function Analytics() {
   // constants for AnalyticsCircle
   const [goal, setGoal] = useState(5);
   const [completed, setCompleted] = useState(0);
-    
+  
+  
+  // constant for StackedBars
     
   const [isPopupOpen ] = useState(false);
 
@@ -111,9 +113,9 @@ function Analytics() {
           <Card>
             <div className="card2-header">
               <h2>TYPE OF ACTIVITY TRACKER</h2>
-              <h3>Yearly</h3>
+              <h3>Over Time</h3>
             </div>
-              <StackedHistogram/>
+              <StackedBars/>
           </Card>
 
           <Card>
