@@ -81,9 +81,8 @@ const handleActivitySubmit = (event) => {
   return (
 
     <div className="popup-grid-container">
-    <div className="form-flex-container">
       {/* Form for AnalyticsCircle */}
-      <form onSubmit={handleSubmit}>
+      <form className="form-flex" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Goal Progress Chart</legend><br/>
         <label>
@@ -108,14 +107,15 @@ const handleActivitySubmit = (event) => {
         <br/>
         <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
-      </div>
+      
 
-      <div className="form-flex-container">
+
       {/* Form for StackedBars */}
-      <form onSubmit={handleActivitySubmit}>
+      <form className="form-flex" onSubmit={handleActivitySubmit}>
       <fieldset>
         <legend>Activity Tracker Chart</legend><br/>
         <label>
+          <br/>
           <select value={activityChartX} onChange={(event) => setActivityChartX(event.target.value)}>
             <option value="">Select Activity</option>
             <option value="Running">Running</option>
@@ -126,7 +126,7 @@ const handleActivitySubmit = (event) => {
             <option value="Stretching">Stretching</option>
             <option value="Boxing">Boxing</option>
           </select>
-        </label><br/><br/><br/>
+        </label><br/><br/>
         <label>
           Qty:
           <input
@@ -140,12 +140,10 @@ const handleActivitySubmit = (event) => {
         <br/>
         <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
-    </div>
 
 
-      <div className="form-flex-container">
       {/* Form for SleepChart */}
-      <form onSubmit={handleSleepSubmit}>
+      <form className="form-flex" onSubmit={handleSleepSubmit}>
       <fieldset>
         <legend>Sleep Chart</legend><br/>
         <label>
@@ -173,11 +171,10 @@ const handleActivitySubmit = (event) => {
         <br/>
         <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
-      </div>
 
-      <div className="form-flex-container">
+
       {/* Form for WeightChart */}
-      <form onSubmit={handleWeightSubmit}>
+      <form className="form-flex" onSubmit={handleWeightSubmit}>
       <fieldset>
         <legend>Weight Over Time Chart</legend><br/>
         <label>
@@ -211,7 +208,6 @@ const handleActivitySubmit = (event) => {
         <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
       </div>
-    </div>
  
   );
 }
