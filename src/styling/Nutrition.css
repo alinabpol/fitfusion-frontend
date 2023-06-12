@@ -24,13 +24,15 @@
   margin: 0 auto;
   text-align: center;
   grid-gap: 0 5% ;
-  padding: 10%
+  padding: 10%;
+  
 }
 
 .img-recipes {
   width: 100%;
   height: auto;
   -webkit-filter: brightness(100%);
+  box-shadow: 8px 2px 15px #3e3e3e;
 }
 .nutr-images{
   width: 350px; /* Adjust the width as desired */

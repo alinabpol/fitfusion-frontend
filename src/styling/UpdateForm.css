@@ -49,7 +49,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: large;
     width: 90%;
-    border-color: black;
+    border-color: #7d7d7d;
     color: #595959;
 
 }
@@ -67,7 +67,7 @@ select{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: large;
     color: #595959;
-    border: 2px solid #010101;
+    border: 2px solid #7d7d7d;
 }
 
 

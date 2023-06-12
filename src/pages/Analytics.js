@@ -5,6 +5,7 @@ import StackedBars from "../components/StackedBars";
 import WeightChart from "../components/WeightChart";
 import SleepChart from "../components/SleepChart";
 import UpdateForm from '../components/UpdateForm';
+import BMI from '../components/BMI';
 
 import { useState } from 'react'
 import { FaTimes } from "react-icons/fa";
@@ -39,8 +40,8 @@ function Analytics() {
       { day: 'Mon', hours: 6 },
       { day: 'Tue', hours: 6 },
       { day: 'Wed', hours: 9 },
-      { day: 'Thur', hours: 0 },
-      { day: 'Fri', hours: 0 },
+      { day: 'Thur', hours: 7 },
+      { day: 'Fri', hours: 5 },
       { day: 'Sat', hours: 0 },
       { day: 'Sun', hours: 0 }
     ])
@@ -48,7 +49,7 @@ function Analytics() {
 
   // constants for AnalyticsCircle
   const [goal, setGoal] = useState(5);
-  const [completed, setCompleted] = useState(0);
+  const [completed, setCompleted] = useState(2);
   
   
   // constant for StackedBars
@@ -70,6 +71,7 @@ function Analytics() {
     setCompleted(completedUpdated);
   };
 
+  
   
     return (
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
@@ -106,7 +108,27 @@ function Analytics() {
                           </div>
                   )}
                </Popup>
-                <button className="button-styled">Check Your BMI</button>
+
+                <Popup trigger={
+                  <div>
+                    <button className="button-styled">Check your BMI</button>
+                  </div>
+                    }modal nested>
+                    {close => (
+                      <div className='popup-window popup-bmi'>
+                        <button className="close" tabIndex="0" onClick=
+                          {() => close()}>
+                               <FaTimes />
+                        </button>
+                        <div className="popup-container">
+                          <h2 className="popup-header">Check your BMI:</h2>
+                          <BMI 
+     
+                          />         
+                        </div>
+                      </div>
+              )}
+           </Popup>
             </div >
           </div >
         </div >
