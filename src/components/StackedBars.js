@@ -1,5 +1,5 @@
 import { VictoryChart, VictoryLabel, VictoryStack, VictoryAxis, VictoryBar } from 'victory'
-import { useState } from 'react';
+
 import "../styling/Analytics.css"
 
 const StackedBars = ({activityData, setActivityData}) => {
