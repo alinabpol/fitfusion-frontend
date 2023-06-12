@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+import "../styling/UpdateForm.css"
+import "../styling/Button.css"
+
+
 function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, sleepData, setSleepData, activityData, setActivityData }) {
   
   // constants for AnalyticsCircle chart
@@ -75,34 +79,110 @@ const handleActivitySubmit = (event) => {
 };
 
   return (
-    <div>
+
+    <div className="popup-grid-container">
+    <div className="form-flex-container">
       {/* Form for AnalyticsCircle */}
       <form onSubmit={handleSubmit}>
+      <fieldset>
+        <legend>Goal Progress Chart</legend><br/>
         <label>
           Weekly Goal:
           <input
+            className="update-input"
             type="number"
             value={goalUpdated}
             onChange={(event) => setGoalUpdated(parseInt(event.target.value, 10))}
           />
-        </label>
+        </label><br/><br/>
         <label>
           Workouts Completed:
           <input
+            className="update-input"
             type="number"
             value={completedUpdated}
             onChange={(event) => setCompletedUpdated(parseInt(event.target.value, 10))}
           />
         </label>
-        <button type="submit">Submit</button>
+        </fieldset>
+        <br/>
+        <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
+      </div>
 
+      <div className="form-flex-container">
+      {/* Form for StackedBars */}
+      <form onSubmit={handleActivitySubmit}>
+      <fieldset>
+        <legend>Activity Tracker Chart</legend><br/>
+        <label>
+          <select value={activityChartX} onChange={(event) => setActivityChartX(event.target.value)}>
+            <option value="">Select Activity</option>
+            <option value="Running">Running</option>
+            <option value="Walking">Walking</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Gym">Gym</option>
+            <option value="Cancelled Workout">Cancelled Workout</option>
+            <option value="Stretching">Stretching</option>
+            <option value="Boxing">Boxing</option>
+          </select>
+        </label><br/><br/><br/>
+        <label>
+          Qty:
+          <input
+            className="update-input"
+            type="number"
+            value={activityChartY}
+            onChange={(event) => setActivityChartY(parseInt(event.target.value, 10))}
+          />
+        </label>
+        </fieldset>
+        <br/>
+        <button className="button-styled btn-form" type="submit">Submit</button>
+      </form>
+    </div>
+
+
+      <div className="form-flex-container">
+      {/* Form for SleepChart */}
+      <form onSubmit={handleSleepSubmit}>
+      <fieldset>
+        <legend>Sleep Chart</legend><br/>
+        <label>
+          <select value={sleepChartDay} onChange={(event) => setSleepChartDay(event.target.value)}>
+            <option value="">Select Day</option>
+            <option value="Mon">Mon</option>
+            <option value="Tue">Tue</option>
+            <option value="Wed">Wed</option>
+            <option value="Thu">Thur</option>
+            <option value="Fri">Fri</option>
+            <option value="Sat">Sat</option>
+            <option value="Sun">Sun</option>
+          </select>
+        </label><br/><br/>
+        <label>
+          Hours of Sleep:
+          <input
+            className="update-input"
+            type="number"
+            value={sleepValue}
+            onChange={(event) => setSleepValue(parseInt(event.target.value, 10))}
+          />
+        </label>
+        </fieldset>
+        <br/>
+        <button className="button-styled btn-form" type="submit">Submit</button>
+      </form>
+      </div>
+
+      <div className="form-flex-container">
       {/* Form for WeightChart */}
       <form onSubmit={handleWeightSubmit}>
+      <fieldset>
+        <legend>Weight Over Time Chart</legend><br/>
         <label>
-          Month:
           <select value={weightMonth} onChange={(event) => setWeightMonth(event.target.value)}>
-            <option value="">Month</option>
+            <option value="">Select Month</option>
             <option value="Jan">January</option>
             <option value="Feb">February</option>
             <option value="Mar">March</option>
@@ -116,70 +196,23 @@ const handleActivitySubmit = (event) => {
             <option value="Nov">November</option>
             <option value="Dec">December</option>
           </select>
-        </label>
+        </label><br/><br/>
         <label>
           Weight:
           <input
+            className="update-input"
             type="number"
             value={weightValue}
             onChange={(event) => setWeightValue(parseInt(event.target.value, 10))}
           />
         </label>
-        <button type="submit">Submit</button>
+        </fieldset>
+        <br/>
+        <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
-
-      {/* Form for SleepChart */}
-      <form onSubmit={handleSleepSubmit}>
-        <label>
-          Day:
-          <select value={sleepChartDay} onChange={(event) => setSleepChartDay(event.target.value)}>
-            <option value="">Day</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thur</option>
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-          </select>
-        </label>
-        <label>
-          Hours of Sleep:
-          <input
-            type="number"
-            value={sleepValue}
-            onChange={(event) => setSleepValue(parseInt(event.target.value, 10))}
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-
-      {/* Form for StackedBars */}
-      <form onSubmit={handleActivitySubmit}>
-        <label>
-          Day:
-          <select value={activityChartX} onChange={(event) => setActivityChartX(event.target.value)}>
-            <option value="">Activity</option>
-            <option value="Running">Running</option>
-            <option value="Walking">Walking</option>
-            <option value="Swimming">Swimming</option>
-            <option value="Gym">Gym</option>
-            <option value="Cancelled Workout">Cancelled Workout</option>
-            <option value="Stretching">Stretching</option>
-            <option value="Boxing">Boxing</option>
-          </select>
-        </label>
-        <label>
-          Qty:
-          <input
-            type="number"
-            value={activityChartY}
-            onChange={(event) => setActivityChartY(parseInt(event.target.value, 10))}
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+      </div>
     </div>
+ 
   );
 }
 

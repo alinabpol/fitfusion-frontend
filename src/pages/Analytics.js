@@ -11,16 +11,18 @@ import { FaTimes } from "react-icons/fa";
 
 import "../styling/Analytics.css"
 import "../styling/Button.css"
+import "../styling/UpdateForm.css"
+
 
 
 function Analytics() {
 
   // constant for WeightChart
   const [weightData, setWeightData] = useState([
-    { x: 'Jan', y: 0 },
-    { x: 'Feb', y: 0 },
-    { x: 'Mar', y: 0 },
-    { x: 'Apr', y: 0 },
+    { x: 'Jan', y: 150 },
+    { x: 'Feb', y: 140 },
+    { x: 'Mar', y: 140 },
+    { x: 'Apr', y: 142 },
     { x: 'May', y: 0 },
     { x: 'Jun', y: 0 },
     { x: 'Jul', y: 0 },
@@ -34,9 +36,9 @@ function Analytics() {
 
   // constant for SleepChart
   const [sleepData, setSleepData] = useState([
-      { day: 'Mon', hours: 0 },
-      { day: 'Tue', hours: 0 },
-      { day: 'Wed', hours: 0 },
+      { day: 'Mon', hours: 6 },
+      { day: 'Tue', hours: 6 },
+      { day: 'Wed', hours: 9 },
       { day: 'Thur', hours: 0 },
       { day: 'Fri', hours: 0 },
       { day: 'Sat', hours: 0 },
@@ -87,7 +89,8 @@ function Analytics() {
                               {() => close()}>
                                    <FaTimes />
                             </button>
-                            <div className="popup-flex-container">
+                            <div className="popup-container">
+                              <h2 className="popup-header">Use the forms below to update your stats:</h2>
                               <UpdateForm 
                                 goal={goal} 
                                 completed={completed} 
