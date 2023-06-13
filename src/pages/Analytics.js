@@ -54,12 +54,12 @@ function Analytics() {
   
   // constant for StackedBars
   const [activityData, setActivityData] = useState([
-    { x: "Running", y: 57 },
-    { x: "Walking", y: 40 },
-    { x: "Swimming", y: 38 },
-    { x: "Gym", y: 37 },
-    { x: "Cancelled Workout", y: 25 },
-    { x: "Yoga", y: 15 },
+    { x: "Running", y: 17 },
+    { x: "Walking", y: 20 },
+    { x: "Swimming", y: 15 },
+    { x: "Gym", y: 10 },
+    { x: "Cancelled Workout", y: 8 },
+    { x: "Yoga", y: 7 },
     { x: "Stretching", y: 13 },
     { x: "Boxing", y: 12 }
   ])

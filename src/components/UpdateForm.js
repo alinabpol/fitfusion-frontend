@@ -22,14 +22,15 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, slee
   const [activityChartX, setActivityChartX] = useState('');
   const [activityChartY, setActivityChartY] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onUpdate(parseInt(goalUpdated), parseInt(completedUpdated));
-  };
 
-  const handleWeightSubmit = (event) => {
-    event.preventDefault();
-    console.log(weightData)
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  if (goalUpdated !== undefined && completedUpdated !== undefined) {
+    onUpdate(parseInt(goalUpdated), parseInt(completedUpdated));
+  }
+
+  if (weightMonth !== '' && weightValue !== '') {
     const updatedWeightData = weightData.map((i) => {
       if (i.x === weightMonth) {
         return { x: i.x, y: weightValue };
@@ -40,43 +41,35 @@ function UpdateForm({ goal, completed, onUpdate, weightData, setWeightData, slee
     setWeightData(updatedWeightData);
     setWeightMonth('');
     setWeightValue('');
-  };
+  }
 
+  if (sleepChartDay !== '' && sleepValue !== '') {
+    const updatedSleepData = sleepData.map((i) => {
+      if (i.day === sleepChartDay) {
+        return { day: i.day, hours: sleepValue };
+      } else {
+        return i;
+      }
+    });
+    setSleepData(updatedSleepData);
+    setSleepChartDay('');
+    setSleepValue('');
+  }
 
-
-const handleSleepSubmit = (event) => {
-  event.preventDefault();
-  console.log("sleepdata in form:",sleepData)
-  const updatedSleepData = sleepData.map((i) => {
-    if (i.day === sleepChartDay) {
-      return { day: i.day, hours: sleepValue };
-    } else {
-      console.log(i)
-      return i;
-    }
-  });
-
-  setSleepData(updatedSleepData);
-  setSleepChartDay('');
-  setSleepValue('');
+  if (activityChartX !== '' && activityChartY !== '') {
+    const updateActivityData = activityData.map((i) => {
+      if (i.x === activityChartX) {
+        return { x: i.x, y: activityChartY };
+      } else {
+        return i;
+      }
+    });
+    setActivityData(updateActivityData);
+    setActivityChartX('');
+    setActivityChartY('');
+  }
 };
 
-const handleActivitySubmit = (event) => {
-  event.preventDefault();
-  console.log("activity data in form:",sleepData)
-  const updateActivityData = activityData.map((i) => {
-    if (i.x === activityChartX) {
-      return { x: i.x, y: activityChartY };
-    } else {
-      console.log(i)
-      return i;
-    }
-  });
-
-  setActivityData(updateActivityData);
-  setActivityChartX('');
-  setActivityChartY('');
-};
 
   return (
 
@@ -105,13 +98,12 @@ const handleActivitySubmit = (event) => {
         </label>
         </fieldset>
         <br/>
-        <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
       
 
 
       {/* Form for StackedBars */}
-      <form className="form-flex" onSubmit={handleActivitySubmit}>
+      <form className="form-flex" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Activity Tracker Chart</legend><br/>
         <label>
@@ -138,12 +130,11 @@ const handleActivitySubmit = (event) => {
         </label>
         </fieldset>
         <br/>
-        <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
 
 
       {/* Form for SleepChart */}
-      <form className="form-flex" onSubmit={handleSleepSubmit}>
+      <form className="form-flex sleep-chart" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Sleep Chart</legend><br/>
         <label>
@@ -169,12 +160,11 @@ const handleActivitySubmit = (event) => {
         </label>
         </fieldset>
         <br/>
-        <button className="button-styled btn-form" type="submit">Submit</button>
       </form>
 
 
       {/* Form for WeightChart */}
-      <form className="form-flex" onSubmit={handleWeightSubmit}>
+      <form className="form-flex weight-chart" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Weight Over Time Chart</legend><br/>
         <label>
