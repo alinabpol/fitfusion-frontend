@@ -121,9 +121,7 @@ function Analytics() {
                                <FaTimes />
                         </button>
                         <div className="popup-container">
-                          <h2 className="popup-header">Check your BMI:</h2>
-                          <BMI 
-     
+                          <BMI      
                           />         
                         </div>
                       </div>

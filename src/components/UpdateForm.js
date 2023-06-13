@@ -77,7 +77,7 @@ const handleSubmit = (event) => {
       {/* Form for AnalyticsCircle */}
       <form className="form-flex" onSubmit={handleSubmit}>
       <fieldset>
-        <legend>Goal Progress Chart</legend><br/>
+        <legend>Goal Progress </legend><br/>
         <label>
           Weekly Goal:
           <input
@@ -105,7 +105,7 @@ const handleSubmit = (event) => {
       {/* Form for StackedBars */}
       <form className="form-flex" onSubmit={handleSubmit}>
       <fieldset>
-        <legend>Activity Tracker Chart</legend><br/>
+        <legend>Activity Tracker </legend><br/>
         <label>
           <br/>
           <select value={activityChartX} onChange={(event) => setActivityChartX(event.target.value)}>
@@ -136,7 +136,7 @@ const handleSubmit = (event) => {
       {/* Form for SleepChart */}
       <form className="form-flex sleep-chart" onSubmit={handleSubmit}>
       <fieldset>
-        <legend>Sleep Chart</legend><br/>
+        <legend>Sleep</legend><br/>
         <label>
           <select value={sleepChartDay} onChange={(event) => setSleepChartDay(event.target.value)}>
             <option value="">Select Day</option>
@@ -166,7 +166,7 @@ const handleSubmit = (event) => {
       {/* Form for WeightChart */}
       <form className="form-flex weight-chart" onSubmit={handleSubmit}>
       <fieldset>
-        <legend>Weight Over Time Chart</legend><br/>
+        <legend>Weight Over Time </legend><br/>
         <label>
           <select value={weightMonth} onChange={(event) => setWeightMonth(event.target.value)}>
             <option value="">Select Month</option>

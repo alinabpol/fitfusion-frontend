@@ -4,8 +4,9 @@
     font-family: 'IBM Plex Sans', sans-serif;
     padding-bottom: 9%;
     margin: 1%;
-    font-size:x-large;
+    font-size: 22px;
     box-shadow: 0px 0px 10px #ccc;
+    background-color: rgb(17, 17, 17);
 
 }
 
@@ -33,13 +34,12 @@
 .popup-header{
     font-family: 'IBM Plex Sans', sans-serif;
     padding: 0;
-    font-size: 25px;
+    font-size: 22px;
     margin-left: 7%;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     margin-top: 0%;
     text-transform: uppercase;  
-    color: #595959;
-
+    color: #FF5252;
 }
 
 
@@ -55,10 +55,8 @@
 }
 
 fieldset{
-    border: 2px solid #acacac;
-    background-color: rgb(224, 239, 233);
-    box-shadow: 0px 0px 12px #ccc;
-    
+    border: 1px solid #bfbfbf;
+    color: rgb(211, 211, 211);
 }
 
 select{
