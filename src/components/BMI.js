@@ -36,27 +36,29 @@ const BMI = () => {
  
   return (
 
-    <div className='container'>
-      <h2 className='center'>BMI Calculator</h2>
+    <div className='container-bmi'>
+      <h2 className='center'>Check Your BMI</h2>
       <form onSubmit={calcBmi}>
  
         <div>
-          <label>Weight (lbs)</label>
-          <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+          <label className="bmi-forms">Weight (lbs)</label>
+          <input className="bmi-input" value={weight} onChange={(e) => setWeight(e.target.value)} />
         </div>
  
         <div>
           <label>Height (in)</label>
-          <input value={height} onChange={(event) => setHeight(event.target.value)} />
+          <input className="bmi-input" value={height} onChange={(event) => setHeight(event.target.value)} />
         </div>
+       
  
         <div>
+        <br></br>
           <button className='button-styled' type='submit'>Submit</button>
         </div>
       </form>
  
       <div className='center'>
-        <h3>Your BMI is: {bmi}</h3>
+        <h3>Your BMI: {bmi}</h3>
         <p>{message}</p>
       </div>
     </div>
