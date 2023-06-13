@@ -45,6 +45,7 @@
 }
 .button-styled:hover{
     background: #dddddd;
+    transition: background-color 0.8s ease;
 
 }
 
@@ -63,20 +64,3 @@
     color: rgb(3, 3, 3);
 
 }
-
-/* .btn-form{
-    background-color: #151515;
-    color: #eeeeee;
-}
-
-.btn-form:hover{
-    background: #ffffff;
-    color: #0e0e0e;
-
-}
-
-.btn-form:active {
-    background-color: #ededed;
-    border-color: #000000;
-    transform: scale(.96);
-} */

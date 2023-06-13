@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import Tooltip from "../components/Tooltip";
 
 import "../styling/Nutrition.css"
+import "../styling/Button.css"
 
 function Nutrition() {
     return (
+      <div className="nutr-page-body">
       <div className="nutrition-container">
         <div className="nutr-img-container">
           <div className="nutrition-header-container">
@@ -65,8 +67,16 @@ function Nutrition() {
             <h2 className="img-headers">Snacks</h2>
           </div>
         </div>
-        
+
+        <div className="text-container">
+          <div className="overlay-box">
+           <h2>SHARE YOUR RECIPES WITH US</h2><br/>
+            <button className="button-styled btn-n">SUBMIT</button>
+          </div>
+            <img className="img-nutr-footer" src="https://fitfusion.s3.us-west-1.amazonaws.com/updated.jpg" alt=""/> 
+        </div>
       </div>
+    </div>
     );
   }
   
