@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Pavanam&display=swap');
-.nav-control {
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=IBM+Plex+Sans:wght@700&family=Noto+Serif+Display:wght@900&family=Pavanam&display=swap');.nav-control {
   position: fixed;
   top: 0;
   width: 100%;
@@ -17,22 +16,48 @@
 .list {
   list-style-type: none;
   background: rgb(55, 68, 58);
-  height: 100%;
+  height:90px;
   display: flex;
   justify-content: flex-end;
   position: relative;
+  align-items: center;
+  justify-content: flex-end;
 }
 .items {
   margin-right: 20px;
+  /* margin-top: 2%; */
   font-size: 20px;
   text-transform: uppercase;
   color: #f1f1f1;
   cursor: pointer;
+  color: rgb(251, 251, 251);
+  text-decoration: none;
+  font-size: x-large;
+  /* transition: color 0.5s; */
+
 }
 
-#logo{
-  align-self:flex-end;
+.items:hover{
+  color:rgb(204, 219, 117);
+  text-underline-offset: 20px;
+  text-decoration: underline;
+
 }
+.items.logo{
+  font-family: 'Noto Serif Display', serif;
+  font-size: 50px;
+  margin-right: auto;
+  color:rgb(227, 227, 219)
+}
+
+.items.logo:hover{
+  color:rgb(227, 227, 227);
+  text-decoration: none;
+}
+
+
+
+
 .btn {
   display: none;
   position: absolute;
@@ -43,16 +68,6 @@
   font-size: 18px;
 }
 
-  a {
-    color: rgb(251, 251, 251);
-    text-decoration: none;
-    font-size: x-large;
-    transition: color 0.5s;
-  }
-  a:hover{
-    color:rgb(212, 208, 186);
-  }
- 
   
   @media screen and (max-width: 900px){
     h1{

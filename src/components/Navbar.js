@@ -51,7 +51,7 @@ const Navbar= () => {
       {(toggleMenu || screenWidth > 900) && (
     <ul className="list">
   
-      <a className="items" id="logo" href="/#">FITFUSION</a>
+      <a className="items logo" href="/#">FITFUSION</a>
       <a className="items" href="/nutrition">NUTRITION</a>
       <a className="items" href="/workouts">WORKOUTS</a>
       <a className="items"href="/analytics">ANALYTICS</a>
