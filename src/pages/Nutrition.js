@@ -34,6 +34,7 @@ function Nutrition() {
       });
     }
   };
+  
 
     return (
       <div className="nutr-page-body">
@@ -50,7 +51,7 @@ function Nutrition() {
         <div className="grid-container-nutrition">
           <div className="nutr-box">
             <Link to={'/breakfast'}>
-                <Tooltip content="Breakfast ">
+                <Tooltip content="Breakfast">
                   <img className="img-recipes" src="https://fitfusion.s3.us-west-1.amazonaws.com/breakfast.png" alt=""></img>
                 </Tooltip>
             </Link>
@@ -103,7 +104,7 @@ function Nutrition() {
            <h2>SHARE YOUR RECIPES WITH US!</h2><br/>
            <Popup trigger={
                   <div>
-            <button className="button-styled btn-n">SUBMIT</button>
+            <button className="button-styled btn-n">SHARE</button>
             </div>
              }modal nested>
              {close => (
