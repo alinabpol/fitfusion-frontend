@@ -75,9 +75,10 @@ function Analytics() {
   
     return (
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
-        <h1> Analytics page</h1>
+       
         <div className="parent-analytics-btns-flex">
           <div className="analytics-btns-flex">
+            
             <div className="btns-container">
                 <Popup trigger={
                   <div>
@@ -105,6 +106,7 @@ function Analytics() {
                                 setActivityData={setActivityData}
                               />         
                             </div>
+                    
                           </div>
                   )}
                </Popup>
@@ -129,6 +131,7 @@ function Analytics() {
            </Popup>
             </div >
           </div >
+          <h1 className="analytics-header"> Analytics</h1>
         </div >
 
 
