@@ -2,7 +2,7 @@
 
 
 .workouts-page{
-    height: 190vh;
+    height: 240vh;
     background-color: black;
 
 }
@@ -14,7 +14,7 @@
     margin-bottom: 20%;
 
 }
-.workouts {
+  .workouts {
     position: relative;
     width: 100%;
     padding-bottom: 5%;
@@ -52,7 +52,7 @@
   }
   
   .header{
-    padding-bottom: 10%;
+    padding-bottom: 6%;
     font-size: xx-large;
     font-family: 'IBM Plex Sans', sans-serif;
   }

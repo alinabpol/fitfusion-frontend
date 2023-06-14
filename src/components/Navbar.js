@@ -1,7 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react'
 
-import '../Navbar.css'
+import '../styling/Navbar.css'
 
 
 

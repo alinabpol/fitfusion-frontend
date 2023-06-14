@@ -74,6 +74,7 @@ function Analytics() {
   
   
     return (
+      
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
        
         <div className="parent-analytics-btns-flex">
