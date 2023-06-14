@@ -1,0 +1,28 @@
+.footer-container {
+    background-color:#1c1c1c;
+    height: 8vw;
+}
+  
+.border-line {
+    border-top: 0.1px solid rgb(149, 149, 149);
+}
+  
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.items.footer {
+    color:rgb(153, 153, 153);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    opacity: 95%;
+}
+
+.items.footer:hover{
+    color:rgb(123, 123, 123);
+
+}
