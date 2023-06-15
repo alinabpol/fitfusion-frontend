@@ -1,39 +1,17 @@
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { useState } from 'react'
+
 
 import Popup from 'reactjs-popup';
 
 import Tooltip from "../components/Tooltip";
+import RecipeForm from "../components/RecipeForm.js"
 
 import "../styling/Nutrition.css"
 import "../styling/Button.css"
 
 function Nutrition() {
-  const [file, setFile] = useState(null);
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-  };
-
-  const handleUpload = () => {
-    if (file) {
-      const formData = new FormData();
-      formData.append('file', file);
-
-      fetch('/upload', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-    }
-  };
   
 
     return (
@@ -114,12 +92,10 @@ function Nutrition() {
                         <FaTimes />
                  </button>
                  <div className="popup-container">
-                   <h2 className="popup-header nutrition-popup">Header</h2>
                    </div>
-                   <div>
-                      <input type="file" onChange={handleFileChange} />
-                        <button onClick={handleUpload}>Upload</button>
-                     </div>
+                    <div>
+                      <RecipeForm/>
+                    </div>
                   </div>
                   )}
             </Popup>
