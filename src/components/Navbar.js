@@ -52,6 +52,7 @@ const Navbar= () => {
     <ul className="list">
   
       <a className="items logo" href="/#">FITFUSION</a>
+      <a className="items" href="/recipes">YOUR RECIPES</a>
       <a className="items" href="/nutrition">NUTRITION</a>
       <a className="items" href="/workouts">WORKOUTS</a>
       <a className="items"href="/analytics">ANALYTICS</a>
