@@ -20,7 +20,7 @@ import SmoothiesShow from "../pages/SmoothiesShow";
 import Workouts from "../pages/Workouts";
 import WorkoutsShow from "../pages/WorkoutsShow";
 import Analytics from "../pages/Analytics";
-import AnalyticsForm from "../pages/AnalyticsForm";
+
 
 const Main = () => {
 
@@ -46,7 +46,6 @@ const Main = () => {
             <Route exact path="/workouts" element={<Workouts/>}></Route>
             <Route exact path="/workout/show/:id" element={<WorkoutsShow/>}></Route>
             <Route exact path="/analytics" element={<Analytics/>}></Route>
-            <Route exact path="/analytics/form" element={<AnalyticsForm/>}></Route>
             <Route exact path="/chat" ></Route>
         </Routes>
         </main>

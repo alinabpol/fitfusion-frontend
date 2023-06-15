@@ -7,7 +7,7 @@ import SleepChart from "../components/SleepChart";
 import UpdateForm from '../components/UpdateForm';
 import BMI from '../components/BMI';
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaTimes } from "react-icons/fa";
 
 import "../styling/Analytics.css"
@@ -19,7 +19,7 @@ import "../styling/UpdateForm.css"
 function Analytics() {
 
   // constant for WeightChart
-  const [weightData, setWeightData] = useState([
+  const [weightData, setWeightData] = useState(JSON.parse(localStorage.getItem('weightData')) || [
     { x: 'Jan', y: 150 },
     { x: 'Feb', y: 140 },
     { x: 'Mar', y: 140 },
@@ -32,28 +32,27 @@ function Analytics() {
     { x: 'Oct', y: 0 },
     { x: 'Nov', y: 0 },
     { x: 'Dec', y: 0 },
-   
-  ])
+  ]);
 
   // constant for SleepChart
-  const [sleepData, setSleepData] = useState([
-      { day: 'Mon', hours: 6 },
-      { day: 'Tue', hours: 6 },
-      { day: 'Wed', hours: 9 },
-      { day: 'Thur', hours: 7 },
-      { day: 'Fri', hours: 5 },
-      { day: 'Sat', hours: 0 },
-      { day: 'Sun', hours: 0 }
-    ])
+  const [sleepData, setSleepData] = useState(JSON.parse(localStorage.getItem('sleepData')) || [
+    { day: 'Mon', hours: 6 },
+    { day: 'Tue', hours: 6 },
+    { day: 'Wed', hours: 9 },
+    { day: 'Thur', hours: 7 },
+    { day: 'Fri', hours: 5 },
+    { day: 'Sat', hours: 0 },
+    { day: 'Sun', hours: 0 },
+  ]);
 
 
   // constants for AnalyticsCircle
-  const [goal, setGoal] = useState(5);
-  const [completed, setCompleted] = useState(2);
+  const [goal, setGoal] = useState(JSON.parse(localStorage.getItem('goal')) || 5);
+  const [completed, setCompleted] = useState(JSON.parse(localStorage.getItem('completed')) || 2);
   
   
   // constant for StackedBars
-  const [activityData, setActivityData] = useState([
+  const [activityData, setActivityData] = useState(JSON.parse(localStorage.getItem('activityData')) || [
     { x: "Running", y: 17 },
     { x: "Walking", y: 20 },
     { x: "Swimming", y: 15 },
@@ -61,18 +60,27 @@ function Analytics() {
     { x: "Cancelled Workout", y: 8 },
     { x: "Yoga", y: 7 },
     { x: "Stretching", y: 13 },
-    { x: "Boxing", y: 12 }
-  ])
+    { x: "Boxing", y: 12 },
+  ]);
     
   const [isPopupOpen ] = useState(false);
 
   const handleUpdate = (goalUpdated, completedUpdated) => {
     setGoal(goalUpdated);
     setCompleted(completedUpdated);
+
+    // Save the updated data to localStorage
+    localStorage.setItem('goal', JSON.stringify(goalUpdated));
+    localStorage.setItem('completed', JSON.stringify(completedUpdated));
   };
 
-  
-  
+  useEffect(() => {
+    localStorage.setItem('weightData', JSON.stringify(weightData));
+    localStorage.setItem('sleepData', JSON.stringify(sleepData));
+    localStorage.setItem('activityData', JSON.stringify(activityData));
+  }, [weightData, sleepData, activityData]);
+
+
     return (
       
       <div className={`analytics-container ${isPopupOpen ? 'popup-open' : ''}`}>
