@@ -78,7 +78,6 @@ const RecipeForm = () => {
             <input className="bmi-input" value={file} maxLength={500} onChange={(event) => setFile(event.target.value)} />
         </div>
 
-
       <div>
         <br/>
         <button className='button-styled' type='submit'>Submit</button>
