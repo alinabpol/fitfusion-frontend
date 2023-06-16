@@ -26,7 +26,7 @@ const RecipeForm = () => {
 
         
 
-        fetch("https://fitfusion.herokuapp.com/api/v1/custom/", {
+        fetch(process.env.REACT_APP_CUSTOM_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

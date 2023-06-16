@@ -7,11 +7,11 @@ import { useState, useEffect } from 'react';
 function WorkoutsShow() {
   const [workout, setWorkout] = useState(null);
   const { id } = useParams();
-  const URL_WORKOUT = `https://fitfusion.herokuapp.com/api/v1/workout/${id}`
+
 
   const getWorkout = async () => {
     try {
-      const response = await fetch(URL_WORKOUT);
+      const response = await fetch(`${process.env.REACT_APP_WORKOUTS_URL}${id}`);
       const data = await response.json();
       console.log("getWorkout data:", data.data);
       setWorkout(data.data);

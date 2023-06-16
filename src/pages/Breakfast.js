@@ -6,8 +6,7 @@ import "../styling/Nutrition.css"
 function Breakfast() {
   const [allBreakfast, setAllBreakfast] = useState([])
 
-  // const URL_BREAKFAST = "http://localhost:8000/api/v1/breakfast/"
-  const URL_BREAKFAST = "https://fitfusion.herokuapp.com/api/v1/breakfast/"
+  const URL_BREAKFAST = process.env.REACT_APP_BREAKFAST_URL
   
   
     const getAllBreakfast = async () => {

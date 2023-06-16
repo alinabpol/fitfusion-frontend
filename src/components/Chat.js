@@ -6,8 +6,6 @@ import "../styling/Button.css"
 
 const Chat = () => {
 
-    // const URL = "http://localhost:8000/api/v1/chat/"
-    const URL = "https://fitfusion.herokuapp.com/api/v1/chat/"
     const [messages, setMessages] = useState([])
     const [chatIsOpen, setChatIsOpen] = useState(false)
 
@@ -21,7 +19,7 @@ const Chat = () => {
         
         e.target.message.value = "";
         
-        const getResponseFromAI = await fetch(URL, {
+        const getResponseFromAI = await fetch(process.env.REACT_APP_CHAT_URL, {
             method: 'POST',
             body: JSON.stringify({ message: userMessage }),
             headers: {

@@ -6,12 +6,10 @@ import "../styling/Nutrition.css"
 function Lunch() {
 
   const [allLunch, setAllLunch] = useState([])
-
-  const URL = "https://fitfusion.herokuapp.com/api/v1/lunch/"
   
   
     const getAllLunch = async () => {
-      const response = await fetch(URL);
+      const response = await fetch(process.env.REACT_APP_LUNCH_URL);
       const data = await response.json();
       console.log("lunch data:", data.data);
       setAllLunch(data.data);

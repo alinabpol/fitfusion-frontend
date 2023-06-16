@@ -7,12 +7,11 @@ import "../styling/NutritionShow.css"
 function RecipesShow() {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
-  const URL = `https://fitfusion.herokuapp.com/api/v1/custom/${id}`
 
 
   const getData = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(`${process.env.REACT_APP_RECIPES_URL}${id}`);
       const data = await response.json();
       console.log("getData data:", data.data);
       setRecipe(data.data);

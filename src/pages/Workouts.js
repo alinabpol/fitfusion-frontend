@@ -8,12 +8,8 @@ const  Workouts = () => {
 
 const [workouts, setWorkouts] = useState([])
 
-// const URL_WORKOUTS = "http://localhost:8000/api/v1/workout/"
-const URL_WORKOUTS = "https://fitfusion.herokuapp.com/api/v1/workout/"
-
-
   const getAllWorkouts = async () => {
-    const response = await fetch(URL_WORKOUTS);
+    const response = await fetch(process.env.REACT_APP_WORKOUTS_URL);
     const data = await response.json();
     console.log("getAllWorkouts data:", data.data);
     setWorkouts(data.data);

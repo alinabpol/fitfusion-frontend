@@ -152,7 +152,7 @@ function Analytics() {
               <h2>GOAL PROGRESS CHART</h2>
               <h3>Weekly</h3>
             </div>
-              <AnalyticsCircle goal={goal} completed={completed}/>
+              <AnalyticsCircle className="weight-chart" goal={goal} completed={completed}/>
           </Card>
           
           <Card>
@@ -168,7 +168,7 @@ function Analytics() {
             <h2>WEIGHT OVER TIME</h2>
             <h3>Yearly</h3>
               </div>
-                <WeightChart weightData={weightData} setWeightData={setWeightData}/>
+                <WeightChart className="weight-chart" weightData={weightData} setWeightData={setWeightData}/>
           </Card>
 
           <Card>
@@ -176,7 +176,7 @@ function Analytics() {
           <h2>HOURS SLEPT</h2>
           <h3>Weekly</h3>
             </div>
-            <SleepChart sleepData={sleepData} setsleepData={setSleepData}/>
+            <SleepChart className="sleep-chart" sleepData={sleepData} setsleepData={setSleepData}/>
           </Card>
 
         </div>

@@ -7,12 +7,11 @@ import "../styling/NutritionShow.css"
 function BreakfastShow() {
   const [lunch, setLunch] = useState(null);
   const { id } = useParams();
-  const URL = `https://fitfusion.herokuapp.com/api/v1/lunch/${id}`
 
 
   const getData = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(`${process.env.REACT_APP_LUNCH_URL}${id}`);
       const data = await response.json();
       console.log("get data:", data.data);
       setLunch(data.data);

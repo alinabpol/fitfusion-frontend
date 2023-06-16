@@ -5,12 +5,10 @@ import "../styling/Nutrition.css"
 
 function Recipes() {
   const [allrecipes, setAllRecipes] = useState([])
-
-  const URL_BREAKFAST = "https://fitfusion.herokuapp.com/api/v1/custom/"
   
   
     const getAllData = async () => {
-      const response = await fetch(URL_BREAKFAST);
+      const response = await fetch(process.env.REACT_APP_CUSTOM_URL);
       const data = await response.json();
       console.log("getAllData data:", data.data);
       setAllRecipes(data.data);

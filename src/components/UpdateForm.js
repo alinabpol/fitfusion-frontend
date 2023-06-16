@@ -134,7 +134,7 @@ const handleSubmit = (event) => {
 
 
       {/* Form for SleepChart */}
-      <form className="form-flex sleep-chart" onSubmit={handleSubmit}>
+      <form className="form-flex sleep-chart-form" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Sleep</legend><br/>
         <label>
@@ -164,7 +164,7 @@ const handleSubmit = (event) => {
 
 
       {/* Form for WeightChart */}
-      <form className="form-flex weight-chart" onSubmit={handleSubmit}>
+      <form className="form-flex weight-chart-form" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Weight Over Time </legend><br/>
         <label>

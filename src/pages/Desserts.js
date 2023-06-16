@@ -5,13 +5,10 @@ import "../styling/Nutrition.css"
 
 function Desserts() {
 
-  const [allDesserts, setAlDesserts] = useState([])
-
-  const URL = "https://fitfusion.herokuapp.com/api/v1/desserts/"
-  
+  const [allDesserts, setAlDesserts] = useState([])  
   
     const getAllData = async () => {
-      const response = await fetch(URL);
+      const response = await fetch(process.env.REACT_APP_DESSERTS_URL);
       const data = await response.json();
       console.log("lunch data:", data.data);
       setAlDesserts(data.data);

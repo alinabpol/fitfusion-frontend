@@ -1,6 +1,8 @@
 import { VictoryChart, VictoryLine, VictoryScatter} from 'victory'
 import { useEffect } from 'react';
 
+
+
 function SleepChart({sleepData, setSleepData}) {
 
   const chartLine = sleepData.map(({ day, hours }) => ({ x: day, y: hours }))

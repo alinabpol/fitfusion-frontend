@@ -74,6 +74,6 @@ select{
     align-self: flex-end;
 }
 
-.sleep-chart, .weight-chart{
+.sleep-chart-form, .weight-chart-form{
     align-self: flex-start;
 }
