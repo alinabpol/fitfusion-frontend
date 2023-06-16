@@ -41,15 +41,21 @@ function SnacksShow() {
   }
 
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{snacks.title}</h2>
-      <img  src={snacks.img} alt="" />
-      
-      {formatTextWithNewLines(snacks.ingredients)}
-
-      <p className="description">{snacks.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={snacks.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{snacks.title}</h1>
+            {formatTextWithNewLines(snacks.ingredients)}
+            <br/>
+            <p className="description">{snacks.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+  
   
   export default SnacksShow;

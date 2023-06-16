@@ -24,7 +24,7 @@ function Snacks() {
 
     return (
       <div className="recipes-flex-container">
-        <h1> Snacks page</h1>
+        <h1 className="nutrition-headers"> Snacks</h1>
         <div className="grid-container-nutrition">
         {allSnacks ? (
           allSnacks.map((snacks) => (

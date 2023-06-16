@@ -9,7 +9,7 @@ function Smoothies() {
 
   
     const getAllData = async () => {
-      const response = await fetch(process.env.REACT_APP_SMOOTHIES_UR);
+      const response = await fetch(process.env.REACT_APP_SMOOTHIES_URL);
       const data = await response.json();
       console.log("lunch data:", data.data);
       setAllSmoothies(data.data);
@@ -24,7 +24,7 @@ function Smoothies() {
 
     return (
       <div className="recipes-flex-container">
-        <h1> Smoothies page</h1>
+        <h1 className="nutrition-headers"> Smoothies </h1>
         <div className="grid-container-nutrition">
         {allSmoothies ? (
           allSmoothies.map((smoothie) => (

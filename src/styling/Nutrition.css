@@ -24,11 +24,13 @@
   text-align: center;
   grid-gap: 0 5% ;
   padding: 10%;
+  justify-content: center;
   
 }
 
 .img-recipes {
-  width: 100%;
+  width: 340px;
+  height: 340px;
   height: auto;
   -webkit-filter: brightness(100%);
   box-shadow: 8px 2px 15px #3e3e3e;
@@ -55,7 +57,7 @@
 }
 
 .img-headers{
-  margin-top: 0px;
+  margin-top: 3%;
   text-transform: uppercase;
 }
 
@@ -154,3 +156,4 @@
   color: white;
   
 }
+

@@ -11,7 +11,7 @@ function RecipesShow() {
 
   const getData = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_RECIPES_URL}${id}`);
+      const response = await fetch(`${process.env.REACT_APP_CUSTOM_URL}${id}`);
       const data = await response.json();
       console.log("getData data:", data.data);
       setRecipe(data.data);
@@ -42,16 +42,22 @@ function RecipesShow() {
   }
 
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{recipe.title}</h2>
-      <img  src={recipe.file} alt="" />
-      
-      {formatTextWithNewLines(recipe.ingredients)}
-
-      <p className="description">{recipe.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={recipe.file} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{recipe.title}</h1>
+            {formatTextWithNewLines(recipe.ingredients)}
+            <br/>
+            <p className="description">{recipe.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+  
   
   export default RecipesShow;
   

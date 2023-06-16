@@ -41,16 +41,22 @@ function DinnerShow() {
   }
 
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{dinner.title}</h2>
-      <img  src={dinner.img} alt="" />
-      
-      {formatTextWithNewLines(dinner.ingredients)}
-
-      <p className="description">{dinner.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={dinner.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{dinner.title}</h1>
+            {formatTextWithNewLines(dinner.ingredients)}
+            <br/>
+            <p className="description">{dinner.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+  
   
   export default DinnerShow;
   

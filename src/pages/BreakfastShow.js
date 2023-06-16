@@ -40,14 +40,20 @@ function BreakfastShow() {
     return <h1>Loading...</h1>;
   }
 
+  
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{breakfast.title}</h2>
-      <img  src={breakfast.img} alt="" />
-      
-      {formatTextWithNewLines(breakfast.ingredients)}
-
-      <p className="description">{breakfast.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={breakfast.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{breakfast.title}</h1>
+            {formatTextWithNewLines(breakfast.ingredients)}
+            <br/>
+            <p className="description">{breakfast.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

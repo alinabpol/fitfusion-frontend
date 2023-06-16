@@ -9,7 +9,7 @@ function DessertsShow() {
 
   const getData = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BDESSERTS_URL}${id}`);
+      const response = await fetch(`${process.env.REACT_APP_DESSERTS_URL}${id}`);
       const data = await response.json();
       console.log("get data:", data.data);
       setDessert(data.data);
@@ -39,17 +39,24 @@ function DessertsShow() {
     return <h1>Loading...</h1>;
   }
 
+  
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{dessert.title}</h2>
-      <img  src={dessert.img} alt="" />
-      
-      {formatTextWithNewLines(dessert.ingredients)}
-
-      <p className="description">{dessert.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={dessert.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{dessert.title}</h1>
+            {formatTextWithNewLines(dessert.ingredients)}
+            <br/>
+            <p className="description">{dessert.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+  
   
   export default DessertsShow;
   

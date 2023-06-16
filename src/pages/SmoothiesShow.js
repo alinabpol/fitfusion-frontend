@@ -41,13 +41,18 @@ function DessertsShow() {
   }
 
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{smoothie.title}</h2>
-      <img  src={smoothie.img} alt="" />
-      
-      {formatTextWithNewLines(smoothie.ingredients)}
-
-      <p className="description">{smoothie.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={smoothie.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{smoothie.title}</h1>
+            {formatTextWithNewLines(smoothie.ingredients)}
+            <br/>
+            <p className="description">{smoothie.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

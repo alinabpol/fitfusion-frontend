@@ -42,13 +42,18 @@ function BreakfastShow() {
   }
 
   return (
-    <div className="container">
-      <h2 className="recipe-titles">{lunch.title}</h2>
-      <img  src={lunch.img} alt="" />
-      
-      {formatTextWithNewLines(lunch.ingredients)}
-
-      <p className="description">{lunch.description}</p>
+    <div className="nutrition-show-page">
+        <div className="image-container">
+          <img className="nutrition-show-images" src={lunch.img} alt="" />
+      <div className="container">
+          <div className="image-text">
+        <h1 className="recipe-titles-show">{lunch.title}</h1>
+            {formatTextWithNewLines(lunch.ingredients)}
+            <br/>
+            <p className="description">{lunch.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

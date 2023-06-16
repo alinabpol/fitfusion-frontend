@@ -23,7 +23,7 @@ function Recipes() {
 
     return (
       <div className="recipes-flex-container">
-        <h1> Breakfast page</h1>
+        <h1 className="nutrition-headers"> Your recipes</h1>
         <div className="grid-container-nutrition">
         {allrecipes ? (
           allrecipes.map((recipe) => (
