@@ -69,4 +69,8 @@
 
 .button-styled.delete-btn{
   margin-top: 5%;
+  width: 100px
+}
+.button-styled.edit-btn{
+  width: 100px
 }

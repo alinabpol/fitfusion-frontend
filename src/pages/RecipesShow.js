@@ -1,16 +1,17 @@
-
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaTimes } from "react-icons/fa";
+import { useParams, useNavigate } from 'react-router-dom';
 
 import UpdateRecipeForm from '../components/UpdateRecipeForm';
 import Popup from 'reactjs-popup';
+
 
 import "../styling/NutritionShow.css"
 
 function RecipesShow() {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
+  let navigate = useNavigate()
 
 
   const getData = async () => {
@@ -41,6 +42,26 @@ function RecipesShow() {
   };
 
 
+
+  const handleDelete = async () => {
+    try {
+
+      const response = await fetch(`${process.env.REACT_APP_CUSTOM_URL}${id}`, {
+        method: 'DELETE',
+      });
+  
+  
+      if (response.ok) {
+        navigate('/recipes');
+        console.log('Recipe deleted successfully');
+      } else {
+        console.error('Failed to delete recipe');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   if (!recipe) {
     return <h1>Loading...</h1>;
   }
@@ -50,7 +71,7 @@ function RecipesShow() {
       <div className="custom-recipe-btns">
       <Popup trigger={
                   <div>
-            <button className="button-styled">EDIT</button>
+            <button className="button-styled edit-btn">EDIT</button>
             </div>
              }modal nested>
              {close => (
@@ -68,7 +89,7 @@ function RecipesShow() {
                   )}
             </Popup>
         
-        <button className="button-styled delete-btn">DELETE</button>
+        <button className="button-styled delete-btn" onClick={handleDelete} >DELETE</button>
         </div>
         <div className="image-container">
           <img className="nutrition-show-images" src={recipe.file} alt="" />
