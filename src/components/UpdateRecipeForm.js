@@ -61,7 +61,7 @@ const UpdateRecipeForm = () => {
       };
     
       return (
-        <form onSubmit={handleUpdate}>
+        <form className="container-recipe-form" onSubmit={handleUpdate}>
           <div>
             <label className="bmi-forms">Title</label>
             <input
@@ -120,7 +120,7 @@ const UpdateRecipeForm = () => {
             />
           </div>
     
-          <div>
+          <div className="flex-container-submit-update-recipe">
             <br />
             <button className="button-styled" type="submit">
               Submit

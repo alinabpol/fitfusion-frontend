@@ -16,7 +16,7 @@ const Navbar= () => {
   const { logout } = useAuth0();
 
   const { isAuthenticated } = useAuth0();
-  console.log("authenticated?", isAuthenticated)
+  // console.log("authenticated?", isAuthenticated)
 
   const controlNavbar = () => {
     if (window.scrollY>100) {

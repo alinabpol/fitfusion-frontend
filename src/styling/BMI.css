@@ -20,6 +20,7 @@
   .container-bmi {
     border-radius: 8px;
     align-self: center;
+    padding-top: 10%;
   }
    
   .bmi-input {
@@ -38,3 +39,5 @@
   label{
     margin-bottom: 100px
   }
+
+  
