@@ -1,6 +1,10 @@
 
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaTimes } from "react-icons/fa";
+
+import UpdateRecipeForm from '../components/UpdateRecipeForm';
+import Popup from 'reactjs-popup';
 
 import "../styling/NutritionShow.css"
 
@@ -43,6 +47,29 @@ function RecipesShow() {
 
   return (
     <div className="nutrition-show-page">
+      <div className="custom-recipe-btns">
+      <Popup trigger={
+                  <div>
+            <button className="button-styled">EDIT</button>
+            </div>
+             }modal nested>
+             {close => (
+               <div className='popup-window nutrition-popup'>
+                 <button className="close" tabIndex="0" onClick=
+                   {() => close()}>
+                        <FaTimes />
+                 </button>
+                 <div className="popup-container">
+                   </div>
+                    <div>
+                      <UpdateRecipeForm/>
+                    </div>
+                  </div>
+                  )}
+            </Popup>
+        
+        <button className="button-styled delete-btn">DELETE</button>
+        </div>
         <div className="image-container">
           <img className="nutrition-show-images" src={recipe.file} alt="" />
       <div className="container">
