@@ -38,6 +38,7 @@ Once everything is installed, please go ahead and start the development server u
 * Node.Js
 * AWS S3
 * Auth0
+* Heroku
   
 ### Backend:
 * Python
@@ -46,6 +47,7 @@ Once everything is installed, please go ahead and start the development server u
 * MongoDB
 * CORS
 * OpenAI (gpt-3.5-turbo)
+* Heroku
 
   
 ## <a name="features"></a>Features
