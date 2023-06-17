@@ -36,6 +36,8 @@ Once everything is installed, please go ahead and start the development server u
 * HTML5
 * CSS3
 * Node.Js
+* AWS S3
+* Auth0
   
 ### Backend:
 * Python
@@ -43,6 +45,8 @@ Once everything is installed, please go ahead and start the development server u
 * RESTful Routes
 * MongoDB
 * CORS
+* OpenAI (gpt-3.5-turbo)
+
   
 ## <a name="features"></a>Features
 * App pulls information from backend API + OpenAI (chat box)
