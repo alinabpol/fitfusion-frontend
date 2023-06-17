@@ -9,14 +9,16 @@ const Chat = () => {
     const [messages, setMessages] = useState([])
     const [chatIsOpen, setChatIsOpen] = useState(false)
 
+    // prevent reload
     const handleMessageSubmit = async (e) => {
         e.preventDefault()
         const userMessage = e.target.message.value
 
-        
+        // add user messages to the chatbox
         const updateMessages = [...messages, { content: userMessage, sender: 'You' }];
         setMessages(updateMessages);
         
+        //reset value in input to empty
         e.target.message.value = "";
         
         const getResponseFromAI = await fetch(process.env.REACT_APP_CHAT_URL, {
@@ -29,7 +31,7 @@ const Chat = () => {
           const data = await getResponseFromAI.json();
           console.log("data from chat reponse", data.data)
       
-
+     // add AI messages to the chatbox
     const addResponseToChat = [...updateMessages, { content: data.data, sender: 'Assistant' }];
     setMessages(addResponseToChat);
     console.log("response", addResponseToChat )

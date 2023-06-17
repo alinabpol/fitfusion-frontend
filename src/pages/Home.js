@@ -35,7 +35,7 @@ function Home() {
           <div className="card-home">
           <img className="img-home-cards" src="https://fitfusion.s3.us-west-1.amazonaws.com/Screenshot+2023-06-16+at+6.06.32+PM.png" alt=""></img>
           <div className="text-home-cards">
-          <h2>Explore our enhanced analytics page to discover your progress towards your goals</h2>
+          <h2>Explore our enhanced analytics to discover your progress towards your goals</h2>
           <a className="link-card"  href="/analytics">TAKE ME THERE</a>
           </div>
           </div>
