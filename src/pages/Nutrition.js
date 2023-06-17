@@ -79,7 +79,7 @@ function Nutrition() {
 
         <div className="text-container">
           <div className="overlay-box">
-           <h2>SHARE YOUR RECIPES WITH US!</h2><br/>
+           <h2 classname="nutr-header-footer">SHARE YOUR RECIPES WITH US!</h2><br/>
            <Popup trigger={
                   <div>
             <button className="button-styled btn-n">SHARE</button>

@@ -179,3 +179,94 @@
   margin-top: 10%;
 
 }
+
+
+@media only screen and (max-width: 450px) {
+  .header-image-nutrition {
+    max-height: 20%;
+  }
+  
+  .nutrition-container {
+    display: block;
+  }
+  
+  .grid-container-nutrition,
+  .grid-container-recipes {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 80%;
+    padding-top: 15%;
+  }
+  
+  .img-recipes,
+  .nutr-images {
+    width: 100%;
+    height: auto;
+    max-width: 340px;
+    max-height: 340px;
+  }
+  
+  .top-nutrition-header,
+  .bottom-nutrition-header {
+    width: 90%;
+    padding: 2% 5% 0 5%;
+    font-size: 5vw;
+  }
+  
+  .bottom-nutrition-header {
+    font-size: 2vw;
+    margin-top: 30%
+  }
+  
+  .img-headers {
+    margin-top: 5%;
+  }
+  
+  .text-container {
+    max-width: 100%;
+    font-size: 10px;
+  }
+  
+  .button-styled.btn-n {
+    width: 40%;
+    font-size: 3vw;
+  }
+  
+  .container-recipe-form {
+    padding-top: 10%;
+  }
+  
+  .flex-container-submit-update-recipe {
+    justify-content: center;
+    padding-top: 5%;
+  }
+  
+  .recipe-form-container {
+    padding-top: 3%;
+  }
+  
+  .flex-create-recipe-btn-container {
+    justify-content: center;
+  }
+  
+  .button-styled.create-recipe-btn {
+    margin-top: 5%;
+  }
+
+  .img-nutr-footer{
+    height: 250px;
+    width: 400px;
+    opacity: 15%;
+  
+  }
+
+  .overlay-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 43%;
+    padding: 20px;
+    text-align: top;
+    z-index: 1
+  }
+}

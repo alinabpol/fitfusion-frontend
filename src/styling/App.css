@@ -15,3 +15,17 @@ h1{
   font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
+@media only screen and (max-width: 450px) {
+  body {
+    width: 400px;
+  }
+
+  .App {
+    padding: 2% 5%;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-top: 8%;
+  }
+}

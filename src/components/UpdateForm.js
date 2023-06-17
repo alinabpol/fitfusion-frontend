@@ -75,7 +75,7 @@ const handleSubmit = (event) => {
 
     <div className="popup-grid-container">
       {/* Form for AnalyticsCircle */}
-      <form className="form-flex" onSubmit={handleSubmit}>
+      <form className="form-flex goal-form" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Goal Progress </legend><br/>
         <label>

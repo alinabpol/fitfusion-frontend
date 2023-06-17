@@ -106,3 +106,39 @@
 }
 
 
+  
+  @media screen and (max-width: 450px){
+    h1{
+      margin: 10% 10% 0 0;
+    }
+    .list {
+        flex-direction: column;
+        height: auto;
+    }
+    .items:nth-child(1){
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        margin-top: 50px;
+    }
+    .items {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        text-align: center;
+        margin-right: 0px;
+        padding: 20px 0;
+        transition: 1s;
+    }
+    .btn {
+        display: block;
+          padding: 5px;
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #fff;
+ 
+          font-size: 1.8rem;
+        
+    }
+}
+
+
