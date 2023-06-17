@@ -1,15 +1,20 @@
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 import "../styling/Home.css"
 
 import Slider from "../components/Slider";
 
 function Home() {
+
+  const { loginWithRedirect } = useAuth0();
     return (
       <div className="home-container">
         <img className="header-image-home" src="https://fitfusion.s3.us-west-1.amazonaws.com/Screenshot+2023-06-16+at+5.37.56+PM.png" alt=""></img>
           <div className="headers-container">
             <h1 className="home-header1">FITFUSION</h1>
               <h2 className="home-header2">Empowering Welness</h2>
-            <button className="button-styled btn-h">SIGN UP</button>
+            <button className="button-styled btn-h" onClick={() => loginWithRedirect()}>SIGN UP</button>
           </div>
           <Slider/>
           <div className="home-cards-flex">
@@ -30,7 +35,7 @@ function Home() {
           <div className="card-home">
           <img className="img-home-cards" src="https://fitfusion.s3.us-west-1.amazonaws.com/Screenshot+2023-06-16+at+6.06.32+PM.png" alt=""></img>
           <div className="text-home-cards">
-          <h2>Explore our enhanced analytics pageto discover your progress towards your goals</h2>
+          <h2>Explore our enhanced analytics page to discover your progress towards your goals</h2>
           <a className="link-card"  href="/analytics">TAKE ME THERE</a>
           </div>
           </div>
