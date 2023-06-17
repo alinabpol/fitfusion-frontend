@@ -93,7 +93,7 @@ function Nutrition() {
                  </button>
                  <div className="popup-container">
                    </div>
-                    <div>
+                    <div className="recipe-form-container">
                       <RecipeForm/>
                     </div>
                   </div>

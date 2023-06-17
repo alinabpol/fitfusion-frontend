@@ -79,9 +79,9 @@ const RecipeForm = () => {
             <input className="bmi-input" value={file} maxLength={500} onChange={(event) => setFile(event.target.value)} />
         </div>
 
-      <div>
+      <div className="flex-create-recipe-btn-container">
         <br/>
-        <button className='button-styled' type='submit'>Submit</button>
+        <button className='button-styled create-recipe-btn' type='submit'>Submit</button>
       </div>
     </form>   
 

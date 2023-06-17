@@ -29,7 +29,7 @@ function WorkoutsShow() {
     return <h1>Loading...</h1>;
   }
   return (
-    <div>
+    <div className="workout-show-container">
       <h1>{workout.activity}</h1>
       <p>Calories: {workout.calories}</p>
       <p>Time: {workout.time}</p>

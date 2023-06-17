@@ -82,3 +82,25 @@
     color: #FF5252;
 
   }
+
+  .workout-show-container{
+    margin-bottom: 5%;
+    margin-top: 10%
+
+  }
+
+  .text-home-cards{
+    width: 90%;
+    height: 90%;
+    margin: 1% 1% 10% 1%;
+    font-size: 15px;
+  }
+  .link-card{
+    color: rgb(175, 179, 173);
+    text-decoration: none;
+    font-size: 15px;
+  
+  }
+  .link-card:hover{
+    color: azure;
+  }

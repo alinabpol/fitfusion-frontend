@@ -25,7 +25,7 @@ const Slider = () => {
       <Fade>
         {fadeImages.map((fadeImage, index) => (
           <div key={index} style={{ position: 'relative' }}>
-            <img style={{ width: '100%', height: '700px' }} src={fadeImage.url} alt="" />
+            <img style={{ width: '100vw', height: '90vh' }} src={fadeImage.url} alt="" />
             <div className="caption-container">
               {/* <h2 className="captions-slider">{fadeImage.caption}</h2> */}
               <h2 className={`captions-slider ${index === 1 ? 'white-caption' : ''}`}>{fadeImage.caption}</h2>

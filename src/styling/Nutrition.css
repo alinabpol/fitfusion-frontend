@@ -166,3 +166,16 @@
   padding-top: 10%;
 
 }
+.recipe-form-container{
+  padding-top: 7%;
+}
+
+.flex-create-recipe-btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-styled.create-recipe-btn{
+  margin-top: 10%;
+
+}
