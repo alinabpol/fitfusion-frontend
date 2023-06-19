@@ -22,11 +22,15 @@ FitFusion is a fitness app which offers a collection of workout videos and a vas
 
 Clone repository to your local machine and install the dependencies. This can be done by running:
 
-``` npm install ```
+``` 
+npm install
+```
 
 Once everything is installed, please go ahead and start the development server using:
 
-``` npm start ```
+``` 
+npm start
+ ```
 
 
 ## <a name="technologiesused"></a>Technologies Used
