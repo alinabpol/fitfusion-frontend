@@ -41,3 +41,28 @@
   }
 
   
+  @media only screen and (max-width: 410px) {
+    .popup-window.popup-bmi {
+      height: 550px;
+      width: 320px;
+    }
+    
+    .container-bmi {
+      padding-top: 5%;
+    }
+    
+    .bmi-input {
+      font-size: 1.4rem;
+      width: 200px;
+      height: 20px;
+    }
+    
+    .center {
+      margin: 12px 0;
+    }
+  
+    label {
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+  }
