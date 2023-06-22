@@ -1,3 +1,4 @@
+# FitFusion
 
 ### <a name="deployment"></a>Deployed Link: [FitFusion](https://fit-fusion-5f659bc7d199.herokuapp.com/)
 
@@ -12,7 +13,6 @@
 * [Project Next Steps](#nextsteps)
 * [Deployed App](#deployment)
   
-# FitFusion
 
 ## <a name="description"></a>Desription
 FitFusion is a fitness app which offers a collection of workout videos and a vast library of healthy recipes. It also helps user to achieve their fitness goals effortlessly with advanced analytics, as well as helps to ignite their motivation with an AI-powered chat assistant for endless workout inspiration. FitFusion is a fusion of fitness and technology, which makes healthy routines accessible as never before!
@@ -22,11 +22,15 @@ FitFusion is a fitness app which offers a collection of workout videos and a vas
 
 Clone repository to your local machine and install the dependencies. This can be done by running:
 
-``` npm install ```
+``` 
+npm install
+```
 
 Once everything is installed, please go ahead and start the development server using:
 
-``` npm start ```
+``` 
+npm start
+ ```
 
 
 ## <a name="technologiesused"></a>Technologies Used
