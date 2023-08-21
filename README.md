@@ -1,7 +1,7 @@
 # FitFusion
 
-### <a name="deployment"></a>Deployed Link: [FitFusion](https://fit-fusion-5f659bc7d199.herokuapp.com/)
-### Backend repo: [fitfusion-backend](https://github.com/alinabpol/fitfusion-backend)
+#### <a name="deployment"></a>Deployed Link: [FitFusion](https://fit-fusion-5f659bc7d199.herokuapp.com/)
+#### Backend repo: [fitfusion-backend](https://github.com/alinabpol/fitfusion-backend)
 
 ## Table of Contents
 * [Description](#description)
