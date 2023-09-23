@@ -15,7 +15,7 @@
 * [Deployed App](#deployment)
   
 
-## <a name="description"></a>Desription
+## <a name="description"></a>Description
 FitFusion is a fitness app which offers a collection of workout videos and a vast library of healthy recipes. It also helps user to achieve their fitness goals effortlessly with advanced analytics, as well as helps to ignite their motivation with an AI-powered chat assistant for endless workout inspiration. FitFusion is a fusion of fitness and technology, which makes healthy routines accessible as never before!
 
 
